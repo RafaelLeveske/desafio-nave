@@ -6,7 +6,7 @@ import './styles.css';
 
 function Login() {
   return (
-    <div className="home-page container">
+    <div className="login-page container">
       <fieldset>
         <form className="login-form" action="#">
           <div className="header-form">

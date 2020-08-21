@@ -1,0 +1,95 @@
+div.home-page {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+}
+
+div.home-page .home-container {
+  margin: 205px 32px 107px 32px;
+}
+
+div.home-page .home-container .top-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+div.home-page .home-container .top-content h2 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+div.home-page .home-container .top-content button {
+  width: 176px;
+  height: 40px;
+  background: #212121;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border: 0;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+div.home-page .home-container .top-content button:hover {
+  opacity: 0.9;
+}
+
+div.home-page .home-container .middle-content .naver-profile {
+  display: flex;
+  justify-content: center;
+}
+
+div.home-page .home-container .middle-content .naver-profile li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  margin-right: 55px;
+}
+
+div.home-page .home-container .middle-content .naver-profile li:last-child {
+  margin-right: 0;
+}
+
+div.home-page .home-container .middle-content .naver-profile li a img {
+  width: 281px;
+  height: 300px;
+}
+
+div.home-page .home-container .middle-content .naver-profile li strong {
+  font-size: 16px;
+  font-weight: 600;
+  color: #212121;
+  margin-top: 10px;
+}
+
+div.home-page .home-container .middle-content .naver-profile li span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #212121;
+  margin-top: 10px;
+}
+
+div.home-page .home-container .middle-content .naver-profile .icons {
+  margin-top: 10px;
+}
+
+div.home-page .home-container .middle-content .naver-profile .icons button {
+  margin-right: 16px;
+  border: 0;
+  background: #E5E5E5;
+  cursor: pointer;
+}
+
+div.home-page .home-container .middle-content .naver-profile .icons button img {
+  width: 18px;
+  height: 18px;
+}
+
+div.home-page .home-container .middle-content .naver-profile .icons a img {
+  width: 18px;
+  height: 18px;
+}
