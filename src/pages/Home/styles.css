@@ -6,14 +6,14 @@ div.home-page {
 }
 
 div.home-page .home-container {
-  margin: 205px 32px 107px 32px;
+  margin: auto;
 }
 
 div.home-page .home-container .top-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin: 100px 0 20px;
 }
 
 div.home-page .home-container .top-content h2 {
@@ -47,7 +47,7 @@ div.home-page .home-container .middle-content .naver-profile li {
   flex-direction: column;
   justify-content: center;
   list-style: none;
-  margin-right: 55px;
+  margin-right: 30px;
 }
 
 div.home-page .home-container .middle-content .naver-profile li:last-child {
@@ -55,7 +55,7 @@ div.home-page .home-container .middle-content .naver-profile li:last-child {
 }
 
 div.home-page .home-container .middle-content .naver-profile li a img {
-  width: 281px;
+  width: 221px;
   height: 300px;
 }
 
@@ -92,4 +92,62 @@ div.home-page .home-container .middle-content .naver-profile .icons button img {
 div.home-page .home-container .middle-content .naver-profile .icons a img {
   width: 18px;
   height: 18px;
+}
+
+@media (max-width: 1000px) {
+  div.home-page {
+    width: 100%;
+    height: 100%;
+  }
+
+  div.home-page .home-container {
+    margin: auto 30px 5px 60px;
+  }
+
+  div.home-page .home-container .top-content {
+    padding: 0 2px;
+  }
+
+  div.home-page .home-container .top-content h2 {
+    font-size: 30px;
+  }
+
+  div.home-page .home-container .top-content button {
+    width: 126px;
+    height: 35px;
+    font-size: 12px;
+  }
+
+  div.home-page .home-container .middle-content .naver-profile {
+    flex-wrap: wrap;
+    padding: 0 10px;
+  }
+
+  div.home-page .home-container .middle-content .naver-profile li {
+    margin-right: 10px;
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+
+  div.home-page .home-container .middle-content .naver-profile li:last-child {
+    margin-right: 10px;
+  }
+
+
+  div.home-page .home-container .middle-content .naver-profile li a img {
+    width: 170px;
+    height: 200px;
+  }
+
+  div.home-page .home-container .middle-content .naver-profile li strong {
+    font-size: 14px;
+  }
+
+  div.home-page .home-container .middle-content .naver-profile li span {
+    font-size: 14px;
+  }
+
+  div.home-page .home-container .middle-content .naver-profile .icons {
+    margin-bottom: 10px;
+  }
 }
