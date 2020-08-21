@@ -135,7 +135,7 @@ div.new-naver-page .new-naver-container .footer-content button:hover {
   }
 
   div.new-naver-page .new-naver-container .middle-content .first-column ul li input {
-    width: 210px;
+    width: 270px;
     height: 38px;
     font-size: 14px;
   }
@@ -145,7 +145,7 @@ div.new-naver-page .new-naver-container .footer-content button:hover {
   }
 
   div.new-naver-page .new-naver-container .middle-content .second-column ul li input {
-    width: 210px;
+    width: 270px;
     height: 38px;
     font-size: 14px;
   }
@@ -155,7 +155,7 @@ div.new-naver-page .new-naver-container .footer-content button:hover {
   }
 
   div.new-naver-page .new-naver-container .footer-content button {
-    width: 210px;
+    width: 270px;
     height: 38px;
   }
 }
