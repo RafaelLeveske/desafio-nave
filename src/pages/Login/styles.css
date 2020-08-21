@@ -52,6 +52,11 @@ div.home-page .login-form .input-form input {
   font-size: 16px;
   border: 1px solid #424242;
   padding-left: 8px;
+  transition: 0.2s;
+}
+
+div.home-page .login-form .input-form input:hover {
+  opacity: 0.7;
 }
 
 div.home-page .login-form .input-form button {
