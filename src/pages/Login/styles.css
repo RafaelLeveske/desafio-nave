@@ -1,0 +1,72 @@
+div.home-page {
+  height: 100vh;
+  width: 100vw;
+}
+
+div.home-page fieldset {
+  width: fit-content;
+  height: fit-content;
+}
+
+div.home-page .login-form {
+  padding: 40px 32px;
+}
+
+div.home-page .login-form .header-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+div.home-page .login-form .header-form img {
+  width: 60px;
+  height: 60px;
+  margin-right: 16px;
+}
+
+div.home-page .login-form .header-form strong {
+  font-size: 50px;
+  color: #212121;
+}
+
+div.home-page .login-form .input-form {
+  display: flex;
+  flex-direction: column;
+}
+
+div.home-page .login-form .input-form span {
+  font-size: 14px;
+  color: #212121;
+  font-weight: bolder;
+  margin: 12px 0 4px 0;
+}
+
+div.home-page .login-form .input-form span:first-child {
+  margin-top: 0;
+}
+
+div.home-page .login-form .input-form input {
+  width: 384px;
+  height: 40px;
+  font-size: 16px;
+  border: 1px solid #424242;
+  padding-left: 8px;
+}
+
+div.home-page .login-form .input-form button {
+  width: 384px;
+  height: 40px;
+  margin-top: 32px;
+  background: #212121;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  border: 0;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+div.home-page .login-form .input-form button:hover {
+  opacity: 0.9;
+}
