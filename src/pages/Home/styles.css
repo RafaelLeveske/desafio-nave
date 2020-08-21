@@ -150,4 +150,15 @@ div.home-page .home-container .middle-content .naver-profile .icons a img {
   div.home-page .home-container .middle-content .naver-profile .icons {
     margin-bottom: 10px;
   }
+
+  @media (max-width: 700px) {
+    div.home-page .home-container .middle-content .naver-profile li {
+      margin-right: 0;
+    }
+
+    div.home-page .home-container .middle-content .naver-profile li a img {
+      width: 140px;
+      height: 200px;
+    }
+  }
 }
