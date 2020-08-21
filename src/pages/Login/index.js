@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 import logo from '../../assets/logo.svg';
 
 import './styles.css';
@@ -18,7 +20,9 @@ function Login() {
             <input type="email" placeholder="E-mail" />
             <span>Senha</span>
             <input type="password" placeholder="Senha" />
-            <button type="submit">Entrar</button>
+            <Link to="/home">
+              <button type="submit">Entrar</button>
+            </Link>
           </div>
         </form>
       </fieldset>

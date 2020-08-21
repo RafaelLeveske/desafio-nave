@@ -75,3 +75,28 @@ div.login-page .login-form .input-form button {
 div.login-page .login-form .input-form button:hover {
   opacity: 0.9;
 }
+
+@media (max-width: 900px) {
+  div.login-page .login-form .header-form {
+    margin-bottom: 20px;
+  }
+
+  div.login-page .login-form .header-form img {
+    width: 50px;
+    height: 50px;
+    margin-right: 14px;
+  }
+
+  div.login-page .login-form .header-form strong {
+    font-size: 40px;
+  }
+
+  div.login-page .login-form .input-form input {
+    width: 334px;
+    font-size: 15px;
+  }
+
+  div.login-page .login-form .input-form button {
+    width: 334px;
+  }
+}
