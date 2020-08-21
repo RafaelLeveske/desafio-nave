@@ -156,6 +156,10 @@ div.home-page .home-container .middle-content .naver-profile .icons a img {
       margin-right: 0;
     }
 
+    div.home-page .home-container .middle-content .naver-profile li:last-child {
+      margin-right: 0px;
+    }
+
     div.home-page .home-container .middle-content .naver-profile li a img {
       width: 140px;
       height: 200px;
