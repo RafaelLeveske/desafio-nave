@@ -164,5 +164,13 @@ div.home-page .home-container .middle-content .naver-profile .icons a img {
       width: 140px;
       height: 200px;
     }
+
+    div.home-page .home-container .middle-content .naver-profile li strong {
+      font-size: 12px;
+    }
+
+    div.home-page .home-container .middle-content .naver-profile li span {
+      font-size: 10px;
+    }
   }
 }
