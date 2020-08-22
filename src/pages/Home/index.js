@@ -23,7 +23,7 @@ function Home() {
         <section className="middle-content">
           <ul className="naver-profile">
             <li>
-              <Link to="/teste">
+              <Link to="/update">
                 <img src={avatar} alt="Avatar" className="avatar" />
               </Link>
 
@@ -33,7 +33,7 @@ function Home() {
                 <button type="button">
                   <img src={trash} alt="Trash" />
                 </button>
-                <Link to="/teste">
+                <Link to="/update">
                   <img src={edit} alt="Edit" />
                 </Link>
               </div>
@@ -50,7 +50,7 @@ function Home() {
                 <button type="button">
                   <img src={trash} alt="Trash" />
                 </button>
-                <Link to="/teste">
+                <Link to="/update">
                   <img src={edit} alt="Edit" />
                 </Link>
               </div>
@@ -67,7 +67,7 @@ function Home() {
                 <button type="button">
                   <img src={trash} alt="Trash" />
                 </button>
-                <Link to="/teste">
+                <Link to="/update">
                   <img src={edit} alt="Edit" />
                 </Link>
               </div>
@@ -84,7 +84,7 @@ function Home() {
                 <button type="button">
                   <img src={trash} alt="Trash" />
                 </button>
-                <Link to="/teste">
+                <Link to="/update">
                   <img src={edit} alt="Edit" />
                 </Link>
               </div>
