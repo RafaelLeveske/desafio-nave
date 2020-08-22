@@ -1,12 +1,12 @@
 div.home-page {
   width: 100vw;
   height: 100vh;
-  margin: 0 auto;
   padding: 0;
 }
 
 div.home-page .home-container {
   margin: auto;
+  width: 100%;
 }
 
 div.home-page .home-container .top-content {
@@ -40,6 +40,8 @@ div.home-page .home-container .top-content button:hover {
 div.home-page .home-container .middle-content .naver-profile {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 div.home-page .home-container .middle-content .naver-profile li {
@@ -47,11 +49,8 @@ div.home-page .home-container .middle-content .naver-profile li {
   flex-direction: column;
   justify-content: center;
   list-style: none;
-  margin-right: 30px;
-}
-
-div.home-page .home-container .middle-content .naver-profile li:last-child {
-  margin-right: 0;
+  margin: auto 10px;
+  flex: 1;
 }
 
 div.home-page .home-container .middle-content .naver-profile li a img {
@@ -119,14 +118,11 @@ div.home-page .home-container .middle-content .naver-profile .icons a img {
   }
 
   div.home-page .home-container .middle-content .naver-profile {
-    flex-wrap: wrap;
     padding: 0 10px;
   }
 
   div.home-page .home-container .middle-content .naver-profile li {
     margin-right: 10px;
-    flex-grow: 1;
-    flex-shrink: 0;
   }
 
   div.home-page .home-container .middle-content .naver-profile li:last-child {

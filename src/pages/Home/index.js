@@ -23,7 +23,7 @@ function Home() {
         <section className="middle-content">
           <ul className="naver-profile">
             <li>
-              <Link to="/update">
+              <Link to="/teste">
                 <img src={avatar} alt="Avatar" className="avatar" />
               </Link>
 
