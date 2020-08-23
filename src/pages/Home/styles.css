@@ -42,6 +42,8 @@ div.home-page .home-container .middle-content .naver-profile {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
 }
 
 div.home-page .home-container .middle-content .naver-profile li {
@@ -53,9 +55,119 @@ div.home-page .home-container .middle-content .naver-profile li {
   flex: 1;
 }
 
-div.home-page .home-container .middle-content .naver-profile li a img {
-  width: 221px;
+div.home-page .home-container .middle-content .naver-profile li .modal-button {
+  border-style: none;
+  background-color: unset;
+  width: 210px;
   height: 300px;
+  cursor: pointer;
+}
+
+div.home-page .home-container .middle-content .naver-profile li .modal-button img {
+  width: 100%;
+  height: 100%;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal .modal-container {
+  background: #fff;
+  width: 1000px;
+  height: 500px;
+  margin: auto 0;
+}
+
+.modal .modal-container .home-modal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.modal .modal-container .home-modal .avatar-content img {
+  width: 500px;
+  height: 500px;
+}
+
+.modal .modal-container .home-modal .side-content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.modal .modal-container .home-modal .side-content .middle {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+.modal .modal-container .home-modal .side-content .middle .bio h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.modal .modal-container .home-modal .side-content .middle .bio h2 {
+  font-size: 16px;
+  font-weight: normal;
+  color: #212121;
+  margin-top: 10px;
+}
+
+.modal .modal-container .home-modal .side-content .middle .bio strong {
+  font-size: 16px;
+  font-weight: 600;
+  color: #212121;
+  margin-top: 24px;
+}
+
+.modal .modal-container .home-modal .side-content .middle .bio  span {
+  font-size: 16px;
+  font-weight: normal;
+  color: #212121;
+  margin-top: 10px;
+}
+
+.modal .modal-container .home-modal .side-content .middle .footer-modal {
+  margin-top: 150px;
+}
+
+.modal .modal-container .home-modal .side-content .middle .footer-modal button {
+  margin-right: 16px;
+  border: 0;
+  background: unset;
+  cursor: pointer;
+}
+
+.modal .modal-container .home-modal .side-content .close-modal button {
+  transition: 0.2s;
+  margin-right: 21px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.modal .modal-container .home-modal .side-content .close-modal button:hover {
+  opacity: 0.7;
+}
+
+.modal .modal-container .home-modal .side-content .bio {
+  display: flex;
+  flex-direction: column;
 }
 
 div.home-page .home-container .middle-content .naver-profile li strong {
@@ -79,7 +191,7 @@ div.home-page .home-container .middle-content .naver-profile .icons {
 div.home-page .home-container .middle-content .naver-profile .icons button {
   margin-right: 16px;
   border: 0;
-  background: #E5E5E5;
+  background: unset;
   cursor: pointer;
 }
 
@@ -118,7 +230,7 @@ div.home-page .home-container .middle-content .naver-profile .icons a img {
   }
 
   div.home-page .home-container .middle-content .naver-profile {
-    padding: 0 10px;
+    margin: 0 auto;
   }
 
   div.home-page .home-container .middle-content .naver-profile li {
@@ -129,10 +241,9 @@ div.home-page .home-container .middle-content .naver-profile .icons a img {
     margin-right: 10px;
   }
 
-
-  div.home-page .home-container .middle-content .naver-profile li a img {
-    width: 170px;
-    height: 200px;
+  div.home-page .home-container .middle-content .naver-profile li .modal-button img {
+    width: 200px;
+    height: 300px;
   }
 
   div.home-page .home-container .middle-content .naver-profile li strong {
@@ -147,18 +258,69 @@ div.home-page .home-container .middle-content .naver-profile .icons a img {
     margin-bottom: 10px;
   }
 
+  @media (max-width: 800px) {
+    .modal .modal-container {
+      width: 720px;
+      height: 380px;
+    }
+
+    .modal .modal-container .home-modal .avatar-content img {
+      width: 258px;
+      height: 480px;
+      margin-top: -100px;
+    }
+
+    .modal .modal-container .home-modal .side-content {
+      margin-top: 30px;
+    }
+
+    .modal .modal-container .home-modal .side-content .middle .bio h1 {
+      font-size: 16px;
+    }
+
+    .modal .modal-container .home-modal .side-content .middle .bio h2 {
+      font-size: 10px;
+    }
+
+    .modal .modal-container .home-modal .side-content .middle .bio strong {
+      font-size: 10px;
+    }
+
+    .modal .modal-container .home-modal .side-content .middle .bio  span {
+      font-size: 10px;
+    }
+
+    .modal .modal-container .home-modal .side-content .middle .footer-modal {
+      margin-top: 90px;
+    }
+
+    .modal .modal-container .home-modal .side-content .middle .footer-modal button img {
+      width: 10px;
+      height: 10px;
+    }
+
+    .modal .modal-container .home-modal .side-content .middle .footer-modal a img {
+      width: 10px;
+      height: 10px;
+    }
+
+    .modal .modal-container .home-modal .side-content .close-modal button img {
+      width: 10px;
+      height: 10px;
+    }
+  }
+
   @media (max-width: 700px) {
+    div.home-page .home-container {
+      margin: auto 10px;
+    }
+
     div.home-page .home-container .middle-content .naver-profile li {
       margin-right: 0;
     }
 
     div.home-page .home-container .middle-content .naver-profile li:last-child {
       margin-right: 0px;
-    }
-
-    div.home-page .home-container .middle-content .naver-profile li a img {
-      width: 140px;
-      height: 200px;
     }
 
     div.home-page .home-container .middle-content .naver-profile li strong {
