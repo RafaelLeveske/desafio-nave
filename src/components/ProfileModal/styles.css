@@ -1,0 +1,177 @@
+.profile-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.profile-modal .profile-modal-container {
+  background: #fff;
+  width: 1000px;
+  height: 500px;
+  margin: auto 0;
+}
+
+.profile-modal .profile-modal-container .home-modal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.profile-modal .profile-modal-container .home-modal .avatar-content {
+  margin-top: 4px;
+}
+
+.profile-modal .profile-modal-container .home-modal .avatar-content img {
+  width: 500px;
+  height: 500px;
+}
+
+.profile-modal .profile-modal-container .home-modal .side-content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.profile-modal .profile-modal-container .home-modal .side-content .middle {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.profile-modal .profile-modal-container .home-modal .side-content .middle .bio h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.profile-modal .profile-modal-container .home-modal .side-content .middle .bio h2 {
+  font-size: 16px;
+  font-weight: normal;
+  color: #212121;
+  margin-top: 10px;
+}
+
+.profile-modal .profile-modal-container .home-modal .side-content .middle .bio strong {
+  font-size: 16px;
+  font-weight: 600;
+  color: #212121;
+  margin-top: 24px;
+}
+
+.profile-modal .profile-modal-container .home-modal .side-content .middle .bio  span {
+  font-size: 16px;
+  font-weight: normal;
+  color: #212121;
+  margin-top: 10px;
+}
+
+.profile-modal .profile-modal-container .home-modal .side-content .middle .footer-modal {
+  margin-top: 150px;
+}
+
+.profile-modal .profile-modal-container .home-modal .side-content .middle .footer-modal button {
+  margin-right: 16px;
+  border: 0;
+  background: unset;
+  cursor: pointer;
+}
+
+.profile-modal .profile-modal-container .home-modal .side-content .close-modal button {
+  transition: 0.2s;
+  margin-right: 21px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.profile-modal .profile-modal-container .home-modal .side-content .close-modal button:hover {
+  opacity: 0.7;
+}
+
+.profile-modal .profile-modal-container .home-modal .side-content .bio {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1000px) {
+
+
+  .profile-modal {
+    height: 2000px;
+  }
+
+  .profile-modal .profile-modal-container {
+    width: 420px;
+    height: 251px;
+    display: flex;
+    align-items: center;
+  }
+
+  .profile-modal .profile-modal-container .home-modal {
+    display: flex;
+    align-items: center;
+  }
+
+  .profile-modal .profile-modal-container .home-modal .avatar-content {
+    margin-top: -1px;
+  }
+
+  .profile-modal .profile-modal-container .home-modal .avatar-content img {
+    width: 227px;
+    height: 255px;
+  }
+
+  .profile-modal .profile-modal-container .home-modal .side-content .middle {
+    margin-left: 10px;
+  }
+
+  .profile-modal .profile-modal-container .home-modal .side-content .middle .bio h1 {
+    font-size: 12px;
+  }
+
+  .profile-modal .profile-modal-container .home-modal .side-content .middle .bio h2 {
+    font-size: 8px;
+    margin-top: 3px;
+  }
+
+  .profile-modal .profile-modal-container .home-modal .side-content .middle .bio strong {
+    font-size: 8px;
+    margin-top: 5px;
+  }
+
+  .profile-modal .profile-modal-container .home-modal .side-content .middle .bio  span {
+    font-size: 8px;
+    margin-top: 3px;
+  }
+
+  .profile-modal .profile-modal-container .home-modal .side-content .middle .footer-modal {
+    margin-top: 30px;
+  }
+
+  .profile-modal .profile-modal-container .home-modal .side-content .middle .footer-modal button img {
+    width: 10px;
+    height: 10px;
+  }
+
+  .profile-modal .profile-modal-container .home-modal .side-content .middle .footer-modal a img {
+    width: 10px;
+    height: 10px;
+  }
+
+  .profile-modal .profile-modal-container .home-modal .side-content .close-modal button img {
+    width: 10px;
+    height: 10px;
+    margin-left: 105px;
+  }
+}

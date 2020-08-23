@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
 import Header from '../../components/Header';
+import WarningCreateModal from '../../components/WarningCreateModal';
 
 import arrowLeft from '../../assets/arrow-left.svg';
 
 import './styles.css';
 
 function NewNaver() {
+  const [isModalVisible, setIsModalvisible] = useState(false);
+
   return (
     <div className="new-naver-page container">
       <Header />
@@ -51,8 +54,13 @@ function NewNaver() {
           </div>
         </div>
         <div className="footer-content">
-          <button type="button">Salvar</button>
+          <button type="button" onClick={() => setIsModalvisible(true)}>
+            Salvar
+          </button>
         </div>
+        {isModalVisible ? (
+          <WarningCreateModal onClose={() => setIsModalvisible(false)} />
+        ) : null}
       </form>
     </div>
   );
