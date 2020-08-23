@@ -247,11 +247,11 @@ div.home-page .home-container .middle-content .naver-profile .icons a img {
   }
 
   .modal {
-    height: 1000px;
+    height: 2000px;
   }
 
   .modal .modal-container {
-    width: 460px;
+    width: 420px;
     height: 251px;
     display: flex;
     align-items: center;
@@ -307,7 +307,7 @@ div.home-page .home-container .middle-content .naver-profile .icons a img {
   .modal .modal-container .home-modal .side-content .close-modal button img {
     width: 10px;
     height: 10px;
-    margin-left: 145px;
+    margin-left: 105px;
   }
 
   div.home-page .home-container .middle-content .naver-profile li strong {
