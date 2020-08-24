@@ -1,4 +1,4 @@
-.warning-create-modal {
+.warning-update-modal {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +11,7 @@
   background: rgba(0, 0, 0, 0.5);
 }
 
-.warning-create-modal .warning-create-modal-container {
+.warning-update-modal .warning-update-modal-container {
   display: flex;
   justify-content: space-between;
   background: #fff;
@@ -21,24 +21,24 @@
   padding: 0;
 }
 
-.warning-create-modal .warning-create-modal-container .text-content {
+.warning-update-modal .warning-update-modal-container .text-content-update {
   display: flex;
   flex-direction: column;
   margin: 32px 0 0 32px;
 }
 
-.warning-create-modal .warning-create-modal-container .text-content strong {
+.warning-update-modal .warning-update-modal-container .text-content-update .update-strong {
   font-size: 24px;
   font-weight: 600;
 }
 
-.warning-create-modal .warning-create-modal-container .text-content span {
+.warning-update-modal .warning-update-modal-container .text-content-update .update-span {
   font-size: 16px;
   font-weight: normal;
   margin-top: 24px;
 }
 
-.warning-create-modal .warning-create-modal-container .close-modal .close-modal-button {
+.warning-update-modal .warning-update-modal-container .close-modal .close-modal-button {
   border: 0;
   background: none;
   display: flex;
@@ -48,30 +48,30 @@
   transition: 0.2s;
 }
 
-.warning-create-modal .warning-create-modal-container .close-modal .close-modal-button {
+.warning-update-modal .warning-update-modal-container .close-modal .close-modal-button {
   opacity: 0.7;
 }
 
 @media (max-width: 1000px) {
-  .warning-create-modal {
-    height: 160%;
+  .warning-update-modal {
+    height: 200%;
     width: 102%;
   }
 
-  .warning-create-modal .warning-create-modal-container {
+  .warning-update-modal .warning-update-modal-container {
     width: 400px;
     height: 160px;
   }
 
-  .warning-create-modal .warning-create-modal-container .text-content {
+  .warning-update-modal .warning-update-modal-container .text-content-update {
     margin: 18px 0 0 18px;
   }
 
-  .warning-create-modal .warning-create-modal-container .text-content strong {
+  .warning-update-modal .warning-update-modal-container .text-content-update .update-strong {
     font-size: 16px;
   }
 
-  .warning-create-modal .warning-create-modal-container .text-content span {
+  .warning-update-modal .warning-update-modal-container .text-content-update .update-span {
     font-size: 12px;
   }
 }
