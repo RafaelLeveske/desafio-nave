@@ -1,0 +1,115 @@
+.confirm-delete-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.confirm-delete-modal .confirm-delete-modal-container {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  width: 592px;
+  height: 223px;
+  margin: auto 0;
+  padding: 0;
+}
+
+.confirm-delete-modal .confirm-delete-modal-container .text-content {
+  display: flex;
+  flex-direction: column;
+  margin: 32px 0 0 32px;
+}
+
+.confirm-delete-modal .confirm-delete-modal-container .text-content .text-content-strong {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.confirm-delete-modal .confirm-delete-modal-container .text-content .text-content-span {
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 24px;
+}
+
+.confirm-delete-modal .confirm-delete-modal-container .close-modal-button-delete {
+  display: flex;
+  justify-content: flex-end;
+  margin: 32px 32px 0 0;
+}
+
+.confirm-delete-modal .confirm-delete-modal-container .close-modal-button-delete .close-modal-cancel {
+  width: 176px;
+  height: 40px;
+  color: #212121;
+  background: #fff;
+  border: 1px solid #212121;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.confirm-delete-modal .confirm-delete-modal-container .close-modal-button-delete .close-modal-cancel:hover {
+  opacity: 0.9;
+}
+
+.confirm-delete-modal .confirm-delete-modal-container .close-modal-button-delete .close-modal-delete {
+  width: 176px;
+  height: 40px;
+  background: #212121;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.2s;
+  margin-left: 24px;
+}
+
+.confirm-delete-modal .confirm-delete-modal-container .close-modal-button-delete .close-modal-delete:hover {
+  opacity: 0.9;
+}
+
+
+@media (max-width: 1000px) {
+  .confirm-delete-modal {
+    height: 400%;
+    width: 102%;
+  }
+
+  .confirm-delete-modal .confirm-delete-modal-container {
+    width: 400px;
+    height: 190px;
+  }
+
+  .confirm-delete-modal .confirm-delete-modal-container .text-content {
+    margin: 18px 0 0 18px;
+  }
+
+  .confirm-delete-modal .confirm-delete-modal-container .text-content .text-content-strong {
+    font-size: 20px;
+  }
+
+  .confirm-delete-modal .confirm-delete-modal-container .text-content .text-content-span {
+    font-size: 14px;
+  }
+
+  .confirm-delete-modal .confirm-delete-modal-container .close-modal-button-delete .close-modal-cancel {
+    width: 116px;
+    height: 38px;
+    font-size: 10px;
+  }
+
+  .confirm-delete-modal .confirm-delete-modal-container .close-modal-button-delete .close-modal-delete {
+    width: 116px;
+    height: 38px;
+    font-size: 10px;
+  }
+}

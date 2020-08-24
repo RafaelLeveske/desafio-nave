@@ -4,8 +4,8 @@ import close from '../../assets/close.svg';
 
 import './styles.css';
 
-function WarningUpdateModal({
-  id = 'warning-update-modal',
+function WarningDeleteModal({
+  id = 'warning-delete-modal',
   onClose = () => {},
 }) {
   const handleOutsideClick = e => {
@@ -13,11 +13,11 @@ function WarningUpdateModal({
   };
 
   return (
-    <div id={id} className="warning-update-modal" onClick={handleOutsideClick}>
-      <div className="warning-update-modal-container">
-        <div className="text-content-update">
-          <strong className="update-strong">Naver atualizado</strong>
-          <span className="update-span">Naver atualizado com sucesso!</span>
+    <div id={id} className="warning-delete-modal" onClick={handleOutsideClick}>
+      <div className="warning-delete-modal-container">
+        <div className="text-content-delete">
+          <strong className="delete-strong">Naver excluído</strong>
+          <span className="delete-span">Naver excluído com sucesso!</span>
         </div>
         <div className="close-modal">
           <button
@@ -33,4 +33,4 @@ function WarningUpdateModal({
   );
 }
 
-export default WarningUpdateModal;
+export default WarningDeleteModal;

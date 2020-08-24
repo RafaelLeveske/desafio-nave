@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Header from '../../components/Header';
 import ProfileModal from '../../components/ProfileModal';
+import ConfirmDeleteModal from '../../components/ConfirmDeleteModal';
 
 import avatar from '../../assets/avatar.svg';
 import trash from '../../assets/trash.svg';
@@ -12,6 +13,7 @@ import './styles.css';
 
 function Home() {
   const [isModalVisible, setIsModalvisible] = useState(false);
+  const [isDeleteModalVisible, setIsDeleteModalvisible] = useState(false);
 
   return (
     <div className="home-page container">
@@ -39,9 +41,13 @@ function Home() {
               <strong>Juliano Reis</strong>
               <span>Front-end Developer</span>
               <div className="icons">
-                <button type="button">
+                <button
+                  type="button"
+                  onClick={() => setIsDeleteModalvisible(true)}
+                >
                   <img src={trash} alt="Trash" />
                 </button>
+
                 <Link to="/update">
                   <img src={edit} alt="Edit" />
                 </Link>
@@ -62,9 +68,13 @@ function Home() {
               <strong>Juliano Reis</strong>
               <span>Front-end Developer</span>
               <div className="icons">
-                <button type="button">
+                <button
+                  type="button"
+                  onClick={() => setIsDeleteModalvisible(true)}
+                >
                   <img src={trash} alt="Trash" />
                 </button>
+
                 <Link to="/update">
                   <img src={edit} alt="Edit" />
                 </Link>
@@ -85,9 +95,13 @@ function Home() {
               <strong>Juliano Reis</strong>
               <span>Front-end Developer</span>
               <div className="icons">
-                <button type="button">
+                <button
+                  type="button"
+                  onClick={() => setIsDeleteModalvisible(true)}
+                >
                   <img src={trash} alt="Trash" />
                 </button>
+
                 <Link to="/update">
                   <img src={edit} alt="Edit" />
                 </Link>
@@ -108,15 +122,24 @@ function Home() {
               <strong>Juliano Reis</strong>
               <span>Front-end Developer</span>
               <div className="icons">
-                <button type="button">
+                <button
+                  type="button"
+                  onClick={() => setIsDeleteModalvisible(true)}
+                >
                   <img src={trash} alt="Trash" />
                 </button>
+
                 <Link to="/update">
                   <img src={edit} alt="Edit" />
                 </Link>
               </div>
             </li>
           </ul>
+          {isDeleteModalVisible ? (
+            <ConfirmDeleteModal
+              onClose={() => setIsDeleteModalvisible(false)}
+            />
+          ) : null}
         </section>
       </div>
     </div>
