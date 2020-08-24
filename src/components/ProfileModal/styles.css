@@ -105,15 +105,14 @@
 }
 
 @media (max-width: 1000px) {
-
-
   .profile-modal {
-    height: 2000px;
+    height: 170%;
+    width: 102%;
   }
 
   .profile-modal .profile-modal-container {
     width: 420px;
-    height: 251px;
+    height: 255px;
     display: flex;
     align-items: center;
   }
@@ -124,12 +123,12 @@
   }
 
   .profile-modal .profile-modal-container .home-modal .avatar-content {
-    margin-top: -1px;
+    margin-top: 0;
   }
 
   .profile-modal .profile-modal-container .home-modal .avatar-content img {
-    width: 227px;
-    height: 255px;
+    width: 229px;
+    height: 259px;
   }
 
   .profile-modal .profile-modal-container .home-modal .side-content .middle {

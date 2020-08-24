@@ -57,10 +57,10 @@ function NewNaver() {
           <button type="button" onClick={() => setIsModalvisible(true)}>
             Salvar
           </button>
+          {isModalVisible ? (
+            <WarningCreateModal onClose={() => setIsModalvisible(false)} />
+          ) : null}
         </div>
-        {isModalVisible ? (
-          <WarningCreateModal onClose={() => setIsModalvisible(false)} />
-        ) : null}
       </form>
     </div>
   );
