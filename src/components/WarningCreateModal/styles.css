@@ -1,0 +1,77 @@
+.warning-create-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.warning-create-modal .warning-create-modal-container {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  width: 592px;
+  height: 160px;
+  margin: auto 0;
+  padding: 0;
+}
+
+.warning-create-modal .warning-create-modal-container .text-content {
+  display: flex;
+  flex-direction: column;
+  margin: 32px 0 0 32px;
+}
+
+.warning-create-modal .warning-create-modal-container .text-content strong {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.warning-create-modal .warning-create-modal-container .text-content span {
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 24px;
+}
+
+.warning-create-modal .warning-create-modal-container .close-modal .close-modal-button {
+  border: 0;
+  background: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 29px 29px 0 0;
+
+  transition: 0.2s;
+}
+
+.warning-create-modal .warning-create-modal-container .close-modal .close-modal-button {
+  opacity: 0.7;
+}
+
+@media (max-width: 1000px) {
+  .warning-create-modal {
+    height: 160%;
+    width: 102%;
+  }
+
+  .warning-create-modal .warning-create-modal-container {
+    width: 400px;
+    height: 160px;
+  }
+
+  .warning-create-modal .warning-create-modal-container .text-content {
+    margin: 18px 0 0 18px;
+  }
+
+  .warning-create-modal .warning-create-modal-container .text-content strong {
+    font-size: 16px;
+  }
+
+  .warning-create-modal .warning-create-modal-container .text-content span {
+    font-size: 12px;
+  }
+}
