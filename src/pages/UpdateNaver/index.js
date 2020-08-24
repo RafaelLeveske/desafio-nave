@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
 import Header from '../../components/Header';
+import WarningUpdateModal from '../../components/WarningUpdateModal';
 
 import arrowLeft from '../../assets/arrow-left.svg';
 
 import './styles.css';
 
 function UpdateNaver() {
+  const [isModalVisible, setIsModalvisible] = useState(false);
+
   return (
     <div className="new-naver-page container">
       <Header />
@@ -51,7 +54,17 @@ function UpdateNaver() {
           </div>
         </div>
         <div className="footer-content">
-          <button type="button">Salvar</button>
+          <button type="button" onClick={() => setIsModalvisible(true)}>
+            Salvar
+          </button>
+          {isModalVisible ? (
+            <WarningUpdateModal onClose={() => setIsModalvisible(false)}>
+              <div className="text-content">
+                <strong>Naver atualizado</strong>
+                <span>Naver atualizado com sucesso!</span>
+              </div>
+            </WarningUpdateModal>
+          ) : null}
         </div>
       </form>
     </div>
