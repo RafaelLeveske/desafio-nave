@@ -1,10 +1,6 @@
 import React, { useState, useCallback, useContext } from 'react';
 
-import { useHistory } from 'react-router-dom';
-
 import { AuthContext } from '../../context/AuthContext';
-
-import api from '../../services/api';
 
 import logo from '../../assets/logo.svg';
 
@@ -14,11 +10,7 @@ function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const history = useHistory();
-
-  const { id, signIn } = useContext(AuthContext);
-
-  console.log(id);
+  const { signIn } = useContext(AuthContext);
 
   const handleSubmit = useCallback(
     async e => {
