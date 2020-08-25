@@ -6,13 +6,17 @@ import Login from './pages/Login';
 import NewNaver from './pages/NewNaver';
 import UpdateNaver from './pages/UpdateNaver';
 
+import { AuthProvider } from './context/AuthContext';
+
 const Routes = () => {
   return (
     <Switch>
-      <Route path="/" exact component={Login} />
-      <Route path="/home" component={Home} />
-      <Route path="/new" component={NewNaver} />
-      <Route path="/update" component={UpdateNaver} />
+      <AuthProvider>
+        <Route path="/" exact component={Login} />
+        <Route path="/home" component={Home} />
+        <Route path="/new" component={NewNaver} />
+        <Route path="/update" component={UpdateNaver} />
+      </AuthProvider>
     </Switch>
   );
 };

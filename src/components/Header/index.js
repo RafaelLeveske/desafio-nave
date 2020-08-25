@@ -1,21 +1,29 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import logo from '../../assets/logo.svg';
 
 import './styles.css';
 
 function Header() {
+  const history = useHistory();
+
+  function handleLogout() {
+    localStorage.clear();
+
+    history.push('/');
+  }
   return (
     <header className="header-container">
       <div className="side-content">
         <img src={logo} alt="nave.rs" />
         <strong>nave.rs</strong>
       </div>
-      <Link to="/">
-        <button type="button">Sair</button>
-      </Link>
+
+      <button type="button" onClick={handleLogout}>
+        Sair
+      </button>
     </header>
   );
 }
