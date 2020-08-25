@@ -6,7 +6,7 @@ import Login from './pages/Login';
 import NewNaver from './pages/NewNaver';
 import UpdateNaver from './pages/UpdateNaver';
 
-import { AuthProvider } from './context/AuthContext';
+import { AuthProvider } from './hooks/AuthContext';
 
 const Routes = () => {
   return (
