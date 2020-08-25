@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, useContext } from 'react';
 
 import { useHistory } from 'react-router-dom';
+
+import { AuthContext } from '../../context/AuthContext';
 
 import api from '../../services/api';
 
@@ -14,27 +16,46 @@ function Login() {
 
   const history = useHistory();
 
-  async function handleLogin(e) {
-    e.preventDefault();
+  const { id, signIn } = useContext(AuthContext);
 
-    try {
-      const response = await api.post('users/login', { email, password });
+  console.log(id);
 
-      localStorage.setItem('email', response.data.email);
-      localStorage.setItem('password', response.data.password);
+  const handleSubmit = useCallback(
+    async e => {
+      e.preventDefault();
+      try {
+        signIn({
+          email,
+          password,
+        });
+      } catch (err) {
+        alert('Erro ao cadastrar Naver, tente novamente.');
+      }
+    },
+    [email, password, signIn],
+  );
 
-      console.log(response.data);
+  // async function handleLogin(e) {
+  //   e.preventDefault();
 
-      history.push('/home');
-    } catch (err) {
-      alert('Falha no login, tente novamente.');
-    }
-  }
+  //   try {
+  //     const response = await api.post('users/login', { email, password });
+
+  //     localStorage.setItem('email', response.data.email);
+  //     localStorage.setItem('password', response.data.password);
+
+  //     console.log(response.data);
+
+  //     history.push('/home');
+  //   } catch (err) {
+  //     alert('Falha no login, tente novamente.');
+  //   }
+  // }
 
   return (
     <div className="login-page container">
       <fieldset>
-        <form className="login-form" onSubmit={handleLogin}>
+        <form className="login-form" onSubmit={handleSubmit}>
           <div className="header-form">
             <img src={logo} alt="Nave" />
             <strong>nave.rs</strong>
