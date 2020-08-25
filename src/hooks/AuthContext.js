@@ -1,9 +1,9 @@
-import React, { useState, createContext, useCallback } from 'react';
+import React, { useState, createContext, useContext, useCallback } from 'react';
 import api from '../services/api';
 
-export const AuthContext = createContext({});
+const AuthContext = createContext({});
 
-export const AuthProvider = ({ children }) => {
+const AuthProvider = ({ children }) => {
   const [data, setData] = useState(() => {
     const token = localStorage.getItem('@Navedex:token');
     const id = localStorage.getItem('@Navedex:id');
@@ -27,10 +27,30 @@ export const AuthProvider = ({ children }) => {
     localStorage.setItem('@Navedex:id', id);
 
     setData({ token, id });
+    console.log(response.data);
+  }, []);
+
+  const signOut = useCallback(() => {
+    localStorage.removeItem('@Navedex:token');
+    localStorage.removeItem('@Navedex:id');
+
+    setData({});
   }, []);
   return (
-    <AuthContext.Provider value={{ id: data.id, signIn }}>
+    <AuthContext.Provider value={{ id: data.id, signIn, signOut }}>
       {children}
     </AuthContext.Provider>
   );
 };
+
+function useAuth() {
+  const context = useContext(AuthContext);
+
+  if (!context) {
+    throw new Error('useAuth must be used within an AuthProvider');
+  }
+
+  return context;
+}
+
+export { AuthProvider, useAuth };

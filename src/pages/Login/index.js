@@ -1,6 +1,6 @@
-import React, { useState, useCallback, useContext } from 'react';
+import React, { useState, useCallback } from 'react';
 
-import { AuthContext } from '../../context/AuthContext';
+import { useAuth } from '../../hooks/AuthContext';
 
 import logo from '../../assets/logo.svg';
 
@@ -10,7 +10,7 @@ function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const { signIn } = useContext(AuthContext);
+  const { signIn } = useAuth();
 
   const handleSubmit = useCallback(
     async e => {
@@ -26,23 +26,6 @@ function Login() {
     },
     [email, password, signIn],
   );
-
-  // async function handleLogin(e) {
-  //   e.preventDefault();
-
-  //   try {
-  //     const response = await api.post('users/login', { email, password });
-
-  //     localStorage.setItem('email', response.data.email);
-  //     localStorage.setItem('password', response.data.password);
-
-  //     console.log(response.data);
-
-  //     history.push('/home');
-  //   } catch (err) {
-  //     alert('Falha no login, tente novamente.');
-  //   }
-  // }
 
   return (
     <div className="login-page container">
