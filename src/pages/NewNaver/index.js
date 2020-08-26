@@ -22,7 +22,7 @@ function NewNaver() {
 
   const history = useHistory();
 
-  const id = localStorage.getItem('id');
+  const token = localStorage.getItem('@Navedex:token');
 
   async function handleNewNaver(e) {
     e.preventDefault();
@@ -36,17 +36,17 @@ function NewNaver() {
       job_role,
     };
     try {
-      await api.post('navers', data, {
-        headers: {
-          Authorization: id,
-        },
-      });
-      console.log(data);
+      await api
+        .post('navers', data, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        })
+        .then(setIsModalvisible(true));
 
       history.push('/home');
     } catch (err) {
       alert('Erro ao cadastrar Naver, tente novamente.');
-      console.log(data);
     }
   }
 
@@ -122,9 +122,7 @@ function NewNaver() {
           </div>
         </div>
         <div className="footer-content">
-          <button type="submit" onClick={() => setIsModalvisible(true)}>
-            Salvar
-          </button>
+          <button type="submit">Salvar</button>
           {isModalVisible ? (
             <WarningCreateModal onClose={() => setIsModalvisible(false)} />
           ) : null}
