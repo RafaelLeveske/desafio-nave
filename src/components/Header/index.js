@@ -2,6 +2,8 @@ import React from 'react';
 
 import { useHistory } from 'react-router-dom';
 
+import { useAuth } from '../../hooks/auth';
+
 import logo from '../../assets/logo.svg';
 
 import './styles.css';
@@ -9,9 +11,10 @@ import './styles.css';
 function Header() {
   const history = useHistory();
 
-  function handleLogout() {
-    localStorage.clear();
+  const { signOut } = useAuth();
 
+  function handleLogout() {
+    signOut();
     history.push('/');
   }
   return (

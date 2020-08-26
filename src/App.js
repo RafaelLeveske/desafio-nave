@@ -1,17 +1,19 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
-import Routes from './routes';
+import Routes from './routes/index';
+
+import { AuthProvider } from './hooks/auth';
 
 import './styles/global.css';
 
 function App() {
   return (
-    <div>
-      <BrowserRouter>
+    <BrowserRouter>
+      <AuthProvider>
         <Routes />
-      </BrowserRouter>
-    </div>
+      </AuthProvider>
+    </BrowserRouter>
   );
 }
 
