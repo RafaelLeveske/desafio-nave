@@ -86,7 +86,7 @@ function Home() {
                       <img src={trash} alt="Trash" />
                     </button>
 
-                    <Link to="/update">
+                    <Link to={`/update/${naver.id}`}>
                       <img src={edit} alt="Edit" />
                     </Link>
                   </div>
