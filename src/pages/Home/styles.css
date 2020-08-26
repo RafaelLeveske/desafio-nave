@@ -55,7 +55,7 @@ div.home-page .home-container .middle-content .naver-profile li {
   flex: 1;
 }
 
-div.home-page .home-container .middle-content .naver-profile li .modal-button {
+div.home-page .home-container .middle-content .naver-profile li a {
   border-style: none;
   background-color: unset;
   width: 210px;
@@ -63,7 +63,7 @@ div.home-page .home-container .middle-content .naver-profile li .modal-button {
   cursor: pointer;
 }
 
-div.home-page .home-container .middle-content .naver-profile li .modal-button img {
+div.home-page .home-container .middle-content .naver-profile li a img {
   width: 100%;
   height: 100%;
 }
@@ -139,7 +139,7 @@ div.home-page .home-container .middle-content .naver-profile .icons a img {
     margin-right: 10px;
   }
 
-  div.home-page .home-container .middle-content .naver-profile li .modal-button img {
+  div.home-page .home-container .middle-content .naver-profile li a img {
     width: 200px;
     height: 300px;
   }
@@ -170,7 +170,7 @@ div.home-page .home-container .middle-content .naver-profile .icons a img {
       margin-right: 0px;
     }
 
-    div.home-page .home-container .middle-content .naver-profile li .modal-button img {
+    div.home-page .home-container .middle-content .naver-profile li a img {
       width: 150px;
       height: 300px;
     }

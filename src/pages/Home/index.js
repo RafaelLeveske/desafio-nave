@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import api from '../../services/api';
 
 import Header from '../../components/Header';
-import ProfileModal from '../../components/ProfileModal';
 import ConfirmDeleteModal from '../../components/ConfirmDeleteModal';
 import WarningDeleteModal from '../../components/WarningDeleteModal';
 
@@ -14,7 +13,6 @@ import edit from '../../assets/edit.svg';
 import './styles.css';
 
 function Home() {
-  const [isModalVisible, setIsModalvisible] = useState(false);
   const [isDeleteModalVisible, setIsDeleteModalvisible] = useState(false);
   const [navers, setNavers] = useState([]);
   const [
@@ -66,16 +64,9 @@ function Home() {
             {navers.map(naver => {
               return (
                 <li key={naver.id}>
-                  <button
-                    className="modal-button"
-                    type="button"
-                    onClick={() => setIsModalvisible(true)}
-                  >
+                  <Link to={`/profile/${naver.id}`}>
                     <img src={naver.url} alt="Avatar" className="avatar" />
-                  </button>
-                  {isModalVisible ? (
-                    <ProfileModal onClose={() => setIsModalvisible(false)} />
-                  ) : null}
+                  </Link>
                   <strong>{naver.name}</strong>
                   <span>{naver.job_role}</span>
                   <div className="icons">
