@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, useHistory, useRouteMatch } from 'react-router-dom';
+
+import api from '../../services/api';
 
 import Header from '../../components/Header';
 import WarningUpdateModal from '../../components/WarningUpdateModal';
@@ -11,9 +13,47 @@ import './styles.css';
 
 function UpdateNaver() {
   const [isModalVisible, setIsModalvisible] = useState(false);
+  const [name, setName] = useState('');
+  const [birthdate, setBirthdate] = useState('');
+  const [admission_date, setAdmissiondate] = useState('');
+  const [project, setProject] = useState('');
+  const [url, setUrl] = useState('');
+  const [job_role, setJobRole] = useState('');
+
+  const { params } = useRouteMatch();
+
+  const history = useHistory();
+
+  const token = localStorage.getItem('@Navedex:token');
+
+  async function handleUpdateNaver(e) {
+    e.preventDefault();
+
+    const data = {
+      name,
+      birthdate,
+      admission_date,
+      project,
+      url,
+      job_role,
+    };
+    try {
+      await api
+        .put(`navers/${params.id}`, data, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        })
+        .then(setIsModalvisible(true));
+
+      history.push('/home');
+    } catch (err) {
+      alert('Erro ao cadastrar Naver, tente novamente.');
+    }
+  }
 
   return (
-    <div className="new-naver-page container">
+    <div className="new-naver-page container" onSubmit={handleUpdateNaver}>
       <Header />
       <form className="new-naver-container">
         <div className="top-content">
@@ -27,13 +67,28 @@ function UpdateNaver() {
             <ul>
               <li>
                 <span>Nome</span>
-                <input type="text" placeholder="Nome" />
+                <input
+                  type="text"
+                  placeholder="Nome"
+                  value={name}
+                  onChange={e => setName(e.target.value)}
+                />
 
                 <span>Idade</span>
-                <input type="text" placeholder="Idade" />
+                <input
+                  type="text"
+                  placeholder="Idade"
+                  value={birthdate}
+                  onChange={e => setBirthdate(e.target.value)}
+                />
 
                 <span>Projetos que participou</span>
-                <input type="text" placeholder="Projetos que participou" />
+                <input
+                  type="text"
+                  placeholder="Projetos que participou"
+                  value={project}
+                  onChange={e => setProject(e.target.value)}
+                />
               </li>
             </ul>
           </div>
@@ -42,28 +97,36 @@ function UpdateNaver() {
             <ul>
               <li>
                 <span>Cargo</span>
-                <input type="text" placeholder="Cargo" />
+                <input
+                  type="text"
+                  placeholder="Cargo"
+                  value={job_role}
+                  onChange={e => setJobRole(e.target.value)}
+                />
 
                 <span>Tempo de empresa</span>
-                <input type="text" placeholder="Tempo de empresa" />
+                <input
+                  type="text"
+                  placeholder="Tempo de empresa"
+                  value={admission_date}
+                  onChange={e => setAdmissiondate(e.target.value)}
+                />
 
                 <span>URL da foto do Naver</span>
-                <input type="text" placeholder="URL da foto do Naver" />
+                <input
+                  type="text"
+                  placeholder="URL da foto do Naver"
+                  value={url}
+                  onChange={e => setUrl(e.target.value)}
+                />
               </li>
             </ul>
           </div>
         </div>
         <div className="footer-content">
-          <button type="button" onClick={() => setIsModalvisible(true)}>
-            Salvar
-          </button>
+          <button type="submit">Salvar</button>
           {isModalVisible ? (
-            <WarningUpdateModal onClose={() => setIsModalvisible(false)}>
-              <div className="text-content">
-                <strong>Naver atualizado</strong>
-                <span>Naver atualizado com sucesso!</span>
-              </div>
-            </WarningUpdateModal>
+            <WarningUpdateModal onClose={() => setIsModalvisible(false)} />
           ) : null}
         </div>
       </form>

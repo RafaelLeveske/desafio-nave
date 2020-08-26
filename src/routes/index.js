@@ -14,7 +14,7 @@ const Routes = () => {
       <Router path="/" exact component={Login} />
       <Router path="/home" component={Home} isPrivate />
       <Router path="/new" component={NewNaver} isPrivate />
-      <Router path="/update" component={UpdateNaver} isPrivate />
+      <Router path="/update/:id+" component={UpdateNaver} isPrivate />
     </Switch>
   );
 };
