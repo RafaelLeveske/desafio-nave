@@ -27,7 +27,6 @@ const AuthProvider = ({ children }) => {
     localStorage.setItem('@Navedex:id', id);
 
     setData({ token, id });
-    console.log(response.data);
   }, []);
 
   const signOut = useCallback(() => {

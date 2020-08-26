@@ -1,6 +1,8 @@
 import React, { useState, useCallback } from 'react';
 
-import { useAuth } from '../../hooks/AuthContext';
+import { useHistory } from 'react-router-dom';
+
+import { useAuth } from '../../hooks/auth';
 
 import logo from '../../assets/logo.svg';
 
@@ -9,6 +11,8 @@ import './styles.css';
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const history = useHistory();
 
   const { signIn } = useAuth();
 
@@ -20,11 +24,13 @@ function Login() {
           email,
           password,
         });
+
+        history.push('/home');
       } catch (err) {
         alert('Erro ao cadastrar Naver, tente novamente.');
       }
     },
-    [email, password, signIn],
+    [email, history, password, signIn],
   );
 
   return (
