@@ -4,14 +4,22 @@ import { Link, useHistory, useRouteMatch } from 'react-router-dom';
 
 import api from '../../services/api';
 
+import ConfirmDeleteModal from '../../components/ConfirmDeleteModal';
+import WarningDeleteModal from '../../components/WarningDeleteModal';
+
 import close from '../../assets/close.svg';
 import trash from '../../assets/trash.svg';
 import edit from '../../assets/edit.svg';
 
 import './styles.css';
 
-function ProfileModal() {
+function ProfileModal({ id = 'profile-modal' }) {
+  const [isDeleteModalVisible, setIsDeleteModalvisible] = useState(false);
   const [navers, setNavers] = useState([]);
+  const [
+    isWarningDeleteModalVisible,
+    setIsWarningDeleteModalvisible,
+  ] = useState(false);
 
   const { params } = useRouteMatch();
 
@@ -31,12 +39,30 @@ function ProfileModal() {
       });
   }, [params.id, token]);
 
-  const handlePushToHome = useCallback(() => {
-    history.push('/home');
-  }, [history]);
+  async function handleDeleteNaver(naverId) {
+    try {
+      await api.delete(`navers/${naverId}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      setIsWarningDeleteModalvisible(true);
+      history.push('/home');
+    } catch (err) {
+      alert('Erro ao deletar o Naver, tente novamente');
+    }
+  }
+
+  const handlePushToHome = useCallback(
+    e => {
+      if (e.target.id === id) history.push('/home');
+    },
+    [history, id],
+  );
 
   return (
-    <div className="profile-modal" onClick={handlePushToHome}>
+    <div id={id} className="profile-modal" onClick={handlePushToHome}>
       <div className="profile-modal-container">
         {navers && (
           <div className="home-modal">
@@ -56,18 +82,50 @@ function ProfileModal() {
                   <span>{navers.project}</span>
                 </div>
                 <div className="footer-modal">
-                  <button type="button">
+                  <button
+                    type="button"
+                    className="trash"
+                    onClick={() => setIsDeleteModalvisible(true)}
+                  >
                     <img src={trash} alt="Trash" />
                   </button>
                   <Link to={`/update/${navers.id}`}>
                     <img src={edit} alt="Edit" />
                   </Link>
                 </div>
+                {isDeleteModalVisible ? (
+                  <ConfirmDeleteModal
+                    onClose={() => setIsDeleteModalvisible(false)}
+                  >
+                    <button
+                      className="close-modal-cancel"
+                      type="button"
+                      onClick={() => setIsDeleteModalvisible(false)}
+                    >
+                      Cancelar
+                    </button>
+                    <button
+                      className="close-modal-delete"
+                      type="button"
+                      onClick={() =>
+                        handleDeleteNaver(navers.id) &&
+                        setIsDeleteModalvisible(false)
+                      }
+                    >
+                      Excluir
+                    </button>
+                  </ConfirmDeleteModal>
+                ) : null}
+                {isWarningDeleteModalVisible ? (
+                  <WarningDeleteModal
+                    onClose={() => setIsWarningDeleteModalvisible(false)}
+                  />
+                ) : null}
               </div>
               <div className="close-modal">
-                <button type="button" onClick={handlePushToHome}>
+                <Link to="/home">
                   <img src={close} alt="Close" />
-                </button>
+                </Link>
               </div>
             </div>
           </div>

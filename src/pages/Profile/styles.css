@@ -87,7 +87,7 @@
   cursor: pointer;
 }
 
-.profile-modal .profile-modal-container .home-modal .side-content .close-modal button {
+.profile-modal .profile-modal-container .home-modal .side-content .close-modal a {
   transition: 0.2s;
   margin-right: 21px;
   border: 0;
@@ -95,7 +95,7 @@
   cursor: pointer;
 }
 
-.profile-modal .profile-modal-container .home-modal .side-content .close-modal button:hover {
+.profile-modal .profile-modal-container .home-modal .side-content .close-modal a:hover {
   opacity: 0.7;
 }
 
@@ -168,7 +168,7 @@
     height: 10px;
   }
 
-  .profile-modal .profile-modal-container .home-modal .side-content .close-modal button img {
+  .profile-modal .profile-modal-container .home-modal .side-content .close-modal a img {
     width: 10px;
     height: 10px;
     margin-left: 105px;
