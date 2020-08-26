@@ -6,6 +6,7 @@ import api from '../../services/api';
 import Header from '../../components/Header';
 import ProfileModal from '../../components/ProfileModal';
 import ConfirmDeleteModal from '../../components/ConfirmDeleteModal';
+import WarningDeleteModal from '../../components/WarningDeleteModal';
 
 import trash from '../../assets/trash.svg';
 import edit from '../../assets/edit.svg';
@@ -16,6 +17,10 @@ function Home() {
   const [isModalVisible, setIsModalvisible] = useState(false);
   const [isDeleteModalVisible, setIsDeleteModalvisible] = useState(false);
   const [navers, setNavers] = useState([]);
+  const [
+    isWarningDeleteModalVisible,
+    setIsWarningDeleteModalvisible,
+  ] = useState(false);
 
   const token = localStorage.getItem('@Navedex:token');
 
@@ -31,19 +36,20 @@ function Home() {
       });
   }, [token]);
 
-  // async function handleDeleteNaver(id) {
-  //   try {
-  //     await api.delete(`navers/${id}`, {
-  //       headers: {
-  //         Authorization: `Bearer ${token}`,
-  //       },
-  //     });
+  async function handleDeleteNaver(id) {
+    try {
+      await api.delete(`navers/${id}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
 
-  //     setNavers(navers.filter(naver => naver.id !== id));
-  //   } catch (err) {
-  //     alert('Erro ao deletar o Naver, tente novamente');
-  //   }
-  // }
+      setNavers(navers.filter(naver => naver.id !== id));
+      setIsWarningDeleteModalvisible(true);
+    } catch (err) {
+      alert('Erro ao deletar o Naver, tente novamente');
+    }
+  }
 
   return (
     <div className="home-page container">
@@ -84,15 +90,38 @@ function Home() {
                       <img src={edit} alt="Edit" />
                     </Link>
                   </div>
+                  {isDeleteModalVisible ? (
+                    <ConfirmDeleteModal
+                      onClose={() => setIsDeleteModalvisible(false)}
+                    >
+                      <button
+                        className="close-modal-cancel"
+                        type="button"
+                        onClick={() => setIsDeleteModalvisible(false)}
+                      >
+                        Cancelar
+                      </button>
+                      <button
+                        className="close-modal-delete"
+                        type="button"
+                        onClick={() =>
+                          handleDeleteNaver(naver.id) &&
+                          setIsDeleteModalvisible(false)
+                        }
+                      >
+                        Excluir
+                      </button>
+                    </ConfirmDeleteModal>
+                  ) : null}
                 </li>
               );
             })}
+            {isWarningDeleteModalVisible ? (
+              <WarningDeleteModal
+                onClose={() => setIsWarningDeleteModalvisible(false)}
+              />
+            ) : null}
           </ul>
-          {isDeleteModalVisible ? (
-            <ConfirmDeleteModal
-              onClose={() => setIsDeleteModalvisible(false)}
-            />
-          ) : null}
         </section>
       </div>
     </div>
