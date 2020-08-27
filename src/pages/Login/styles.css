@@ -1,53 +1,53 @@
-div.login-page {
+.login-page {
  display: flex;
  justify-content: center;
  margin: 158px auto;
 }
 
-div.login-page fieldset {
+.login-page fieldset {
   width: fit-content;
   height: fit-content;
 }
 
-div.login-page .login-form {
+.login-page .login-form {
   padding: 40px 32px;
 }
 
-div.login-page .login-form .header-form {
+.login-page .login-form .login-form-header {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
 }
 
-div.login-page .login-form .header-form img {
+.login-page .login-form .login-form-header .login-form-header-img {
   width: 60px;
   height: 60px;
   margin-right: 16px;
 }
 
-div.login-page .login-form .header-form strong {
+.login-page .login-form .login-form-header .login-form-header-strong {
   font-size: 50px;
   color: #212121;
 }
 
-div.login-page .login-form .input-form {
+.login-page .login-form .input-form {
   display: flex;
   flex-direction: column;
 }
 
-div.login-page .login-form .input-form span {
+.login-page .login-form .input-form span {
   font-size: 14px;
   color: #212121;
   font-weight: 600;
   margin: 12px 0 4px 0;
 }
 
-div.login-page .login-form .input-form span:first-child {
+.login-page .login-form .input-form span:first-child {
   margin-top: 0;
 }
 
-div.login-page .login-form .input-form input {
+.login-page .login-form .input-form input {
   width: 384px;
   height: 40px;
   font-size: 16px;
@@ -56,11 +56,11 @@ div.login-page .login-form .input-form input {
   transition: 0.2s;
 }
 
-div.login-page .login-form .input-form input:hover {
+.login-page .login-form .input-form input:hover {
   opacity: 0.7;
 }
 
-div.login-page .login-form .input-form button {
+.login-page .login-form .input-form .input-form-button {
   width: 384px;
   height: 40px;
   margin-top: 32px;
@@ -73,31 +73,31 @@ div.login-page .login-form .input-form button {
   transition: 0.2s;
 }
 
-div.login-page .login-form .input-form button:hover {
+.login-page .login-form .input-form .input-form-button:hover {
   opacity: 0.9;
 }
 
 @media (max-width: 900px) {
-  div.login-page .login-form .header-form {
+  .login-page .login-form .login-form-header {
     margin-bottom: 20px;
   }
 
-  div.login-page .login-form .header-form img {
+  .login-page .login-form .login-form-header .login-form-header-img {
     width: 50px;
     height: 50px;
     margin-right: 14px;
   }
 
-  div.login-page .login-form .header-form strong {
+  .login-page .login-form .login-form-header .login-form-header-strong {
     font-size: 40px;
   }
 
-  div.login-page .login-form .input-form input {
+  .login-page .login-form .input-form input {
     width: 334px;
     font-size: 15px;
   }
 
-  div.login-page .login-form .input-form button {
+  .login-page .login-form .input-form .input-form-button {
     width: 334px;
   }
 }

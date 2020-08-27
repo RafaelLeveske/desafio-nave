@@ -37,9 +37,9 @@ function Login() {
     <div className="login-page container">
       <fieldset>
         <form className="login-form" onSubmit={handleSubmit}>
-          <div className="header-form">
-            <img src={logo} alt="Nave" />
-            <strong>nave.rs</strong>
+          <div className="login-form-header">
+            <img src={logo} alt="Nave" className="login-form-header-img" />
+            <strong className="login-form-header-strong">nave.rs</strong>
           </div>
           <div className="input-form">
             <span>E-mail</span>
@@ -55,7 +55,9 @@ function Login() {
               onChange={e => setPassword(e.target.value)}
             />
 
-            <button type="submit">Entrar</button>
+            <button type="submit" className="input-form-button">
+              Entrar
+            </button>
           </div>
         </form>
       </fieldset>
