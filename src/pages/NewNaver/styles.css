@@ -27,30 +27,30 @@
   margin-left: 22px;
 }
 
-.new-naver-page .new-naver-container .middle-content {
+.new-naver-page .new-naver-container .new-naver-middle-content {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 32px;
 }
 
-.new-naver-page .new-naver-container .middle-content .first-column {
+.new-naver-page .new-naver-container .new-naver-middle-content .new-naver-first-column {
   margin-right: 32px;
 }
 
-.new-naver-page .new-naver-container .middle-content .first-column .first-column-ul .first-column-ul-li {
+.new-naver-page .new-naver-container .new-naver-middle-content .new-naver-first-column .new-naver-first-column-ul .new-naver-first-column-ul-li {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
-.new-naver-page .new-naver-container .middle-content .first-column .first-column-ul .first-column-ul-li .first-column-ul-li-span {
+.new-naver-page .new-naver-container .new-naver-middle-content .new-naver-first-column .new-naver-first-column-ul .new-naver-first-column-ul-li .new-naver-first-column-ul-li-span {
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 12px;
 }
 
-.new-naver-page .new-naver-container .middle-content .first-column .first-column-ul .first-column-ul-li .first-column-ul-li-input {
+.new-naver-page .new-naver-container .new-naver-middle-content .new-naver-first-column .new-naver-first-column-ul .new-naver-first-column-ul-li .new-naver-first-column-ul-li-input {
   width: 280px;
   height: 40px;
   background: #fff;
@@ -61,23 +61,23 @@
   transition: 0.2s;
 }
 
-.new-naver-page .new-naver-container .middle-content .first-column .first-column-ul .first-column-ul-li .first-column-ul-li-input:hover {
+.new-naver-page .new-naver-container .new-naver-middle-content .new-naver-first-column .new-naver-first-column-ul .new-naver-first-column-ul-li .new-naver-first-column-ul-li-input:hover {
   opacity: 0.7;
 }
 
-.new-naver-page .new-naver-container .middle-content .second-column .second-column-ul-li {
+.new-naver-page .new-naver-container .new-naver-middle-content .new-naver-second-column .new-naver-second-column-ul-li {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
-.new-naver-page .new-naver-container .middle-content .second-column .second-column-ul-li .second-column-ul-li-span {
+.new-naver-page .new-naver-container .new-naver-middle-content .new-naver-second-column .new-naver-second-column-ul-li .new-naver-second-column-ul-li-span {
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 12px;
 }
 
-.new-naver-page .new-naver-container .middle-content .second-column .second-column-ul-li .second-column-ul-li-input {
+.new-naver-page .new-naver-container .new-naver-middle-content .new-naver-second-column .new-naver-second-column-ul-li .new-naver-second-column-ul-li-input {
   width: 280px;
   height: 40px;
   background: #fff;
@@ -88,16 +88,16 @@
   transition: 0.2s;
 }
 
-.new-naver-page .new-naver-container .middle-content .second-column .second-column-ul-li .second-column-ul-li-input:hover {
+.new-naver-page .new-naver-container .new-naver-middle-content .new-naver-second-column .new-naver-second-column-ul-li .new-naver-second-column-ul-li-input:hover {
   opacity: 0.7;
 }
 
-.new-naver-page .new-naver-container .footer-content {
+.new-naver-page .new-naver-container .new-naver-footer-content {
   display: flex;
   justify-content: flex-end;
 }
 
-.new-naver-page .new-naver-container .footer-content .footer-content-button {
+.new-naver-page .new-naver-container .new-naver-footer-content .new-naver-footer-content-button {
   width: 176px;
   height: 40px;
   background: #212121;
@@ -109,7 +109,7 @@
   transition: 0.2s;
 }
 
-.new-naver-page .new-naver-container .footer-content .footer-content-button:hover {
+.new-naver-page .new-naver-container .new-naver-footer-content .new-naver-footer-content-button:hover {
   opacity: 0.9;
 }
 
@@ -118,7 +118,7 @@
     padding: 100px 0;
   }
 
-  .new-naver-page .new-naver-container .middle-content {
+  .new-naver-page .new-naver-container .new-naver-middle-content {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -126,37 +126,37 @@
     margin-bottom: 32px;
   }
 
-  .new-naver-page .new-naver-container .middle-content .first-column {
+  .new-naver-page .new-naver-container .new-naver-middle-content .new-naver-first-column {
     margin-right: 0;
   }
 
-  .new-naver-page .new-naver-container .middle-content .first-column .first-column-ul .first-column-ul-li .first-column-ul-li-span {
+  .new-naver-page .new-naver-container .new-naver-middle-content .new-naver-first-column .new-naver-first-column-ul .new-naver-first-column-ul-li .new-naver-first-column-ul-li-span {
     font-size: 12px;
     margin-bottom: 8px;
   }
 
-  .new-naver-page .new-naver-container .middle-content .first-column .first-column-ul .first-column-ul-li .first-column-ul-li-input {
+  .new-naver-page .new-naver-container .new-naver-middle-content .new-naver-first-column .new-naver-first-column-ul .new-naver-first-column-ul-li .new-naver-first-column-ul-li-input {
     height: 38px;
     font-size: 14px;
     margin-bottom: 18px;
   }
 
-  .new-naver-page .new-naver-container .middle-content .second-column .second-column-ul-li .second-column-ul-li-span {
+  .new-naver-page .new-naver-container .new-naver-middle-content .new-naver-second-column .new-naver-second-column-ul-li .new-naver-second-column-ul-li-span {
     font-size: 12px;
     margin-bottom: 8px;
   }
 
-  .new-naver-page .new-naver-container .middle-content .second-column .second-column-ul-li .second-column-ul-li-input {
+  .new-naver-page .new-naver-container .new-naver-middle-content .new-naver-second-column .new-naver-second-column-ul-li .new-naver-second-column-ul-li-input {
     height: 38px;
     font-size: 14px;
     margin-bottom: 18px;
   }
 
-  .new-naver-page .new-naver-container .footer-content {
+  .new-naver-page .new-naver-container .new-naver-footer-content {
     justify-content: center;
   }
 
-  .new-naver-page .new-naver-container .footer-content .footer-content-button {
+  .new-naver-page .new-naver-container .new-naver-footer-content .new-naver-footer-content-button {
     width: 270px;
     height: 38px;
   }

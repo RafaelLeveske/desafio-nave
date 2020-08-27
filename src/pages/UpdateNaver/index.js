@@ -52,43 +52,57 @@ function UpdateNaver() {
 
       history.push('/home');
     } catch (err) {
+      setIsWarningUpdateModalvisible(false);
       alert('Erro ao atualizar o Naver, tente novamente.');
     }
   }
 
   return (
-    <div className="new-naver-page container" onSubmit={handleUpdateNaver}>
+    <div className="update-naver-page container" onSubmit={handleUpdateNaver}>
       <Header />
-      <form className="new-naver-container">
-        <div className="top-content">
+      <form className="update-naver-container">
+        <div className="update-naver-top-content">
           <Link to="/home">
-            <img src={arrowLeft} alt="Arrow Left" />
+            <img
+              src={arrowLeft}
+              alt="Arrow Left"
+              className="update-naver-top-content-img"
+            />
           </Link>
-          <h2>Editar Naver</h2>
+          <h2 className="update-naver-top-content-h2">Editar Naver</h2>
         </div>
-        <div className="middle-content">
-          <div className="first-column">
-            <ul>
-              <li>
-                <span>Nome</span>
+        <div className="update-naver-middle-content">
+          <div className="update-naver-first-column">
+            <ul className="update-naver-first-column-ul">
+              <li className="update-naver-first-column-ul-li">
+                <span className="update-naver-first-column-ul-li-span">
+                  Nome
+                </span>
                 <input
                   type="text"
+                  className="update-naver-first-column-ul-li-input"
                   placeholder="Nome"
                   value={name}
                   onChange={e => setName(e.target.value)}
                 />
 
-                <span>Idade</span>
+                <span className="update-naver-first-column-ul-li-span">
+                  Idade
+                </span>
                 <input
                   type="text"
+                  className="update-naver-first-column-ul-li-input"
                   placeholder="Idade"
                   value={birthdate}
                   onChange={e => setBirthdate(e.target.value)}
                 />
 
-                <span>Projetos que participou</span>
+                <span className="update-naver-first-column-ul-li-span">
+                  Projetos que participou
+                </span>
                 <input
                   type="text"
+                  className="update-naver-first-column-ul-li-input"
                   placeholder="Projetos que participou"
                   value={project}
                   onChange={e => setProject(e.target.value)}
@@ -97,28 +111,37 @@ function UpdateNaver() {
             </ul>
           </div>
 
-          <div className="second-column">
-            <ul>
-              <li>
-                <span>Cargo</span>
+          <div className="update-naver-second-column">
+            <ul className="update-naver-second-column-ul">
+              <li className="update-naver-second-column-ul-li">
+                <span className="update-naver-second-column-ul-li-span">
+                  Cargo
+                </span>
                 <input
                   type="text"
+                  className="update-naver-second-column-ul-li-input"
                   placeholder="Cargo"
                   value={job_role}
                   onChange={e => setJobRole(e.target.value)}
                 />
 
-                <span>Tempo de empresa</span>
+                <span className="update-naver-second-column-ul-li-span">
+                  Tempo de empresa
+                </span>
                 <input
                   type="text"
+                  className="update-naver-second-column-ul-li-input"
                   placeholder="Tempo de empresa"
                   value={admission_date}
                   onChange={e => setAdmissiondate(e.target.value)}
                 />
 
-                <span>URL da foto do Naver</span>
+                <span className="update-naver-second-column-ul-li-span">
+                  URL da foto do Naver
+                </span>
                 <input
                   type="text"
+                  className="update-naver-second-column-ul-li-input"
                   placeholder="URL da foto do Naver"
                   value={url}
                   onChange={e => setUrl(e.target.value)}
@@ -127,8 +150,10 @@ function UpdateNaver() {
             </ul>
           </div>
         </div>
-        <div className="footer-content">
-          <button type="submit">Salvar</button>
+        <div className="update-naver-footer-content">
+          <button type="submit" className="update-naver-footer-content-button">
+            Salvar
+          </button>
           {isWarningUpdateModalVisible ? (
             <WarningUpdateModal
               onClose={() => setIsWarningUpdateModalvisible(false)}
