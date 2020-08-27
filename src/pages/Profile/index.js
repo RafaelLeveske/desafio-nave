@@ -13,7 +13,7 @@ import edit from '../../assets/edit.svg';
 
 import './styles.css';
 
-function ProfileModal({ id = 'profile-modal' }) {
+function ProfileModal({ id = 'profile' }) {
   const [isDeleteModalVisible, setIsDeleteModalvisible] = useState(false);
   const [navers, setNavers] = useState([]);
   const [
@@ -62,10 +62,10 @@ function ProfileModal({ id = 'profile-modal' }) {
   );
 
   return (
-    <div id={id} className="profile-modal" onClick={handlePushToHome}>
-      <div className="profile-modal-container">
+    <div id={id} className="profile" onClick={handlePushToHome}>
+      <div className="profile-container">
         {navers && (
-          <div className="home-modal">
+          <div className="profile-content">
             <div className="avatar-content">
               <img src={navers.url} alt="Avatar" />
             </div>
@@ -81,7 +81,7 @@ function ProfileModal({ id = 'profile-modal' }) {
                   <strong>Projetos que participou</strong>
                   <span>{navers.project}</span>
                 </div>
-                <div className="footer-modal">
+                <div className="profile-footer">
                   <button
                     type="button"
                     className="trash"
