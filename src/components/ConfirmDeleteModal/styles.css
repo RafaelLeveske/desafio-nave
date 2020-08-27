@@ -6,9 +6,10 @@
   height: 100%;
   position: absolute;
   top: 0;
+  right: 0;
   left: 0;
-  z-index: 10;
-  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .confirm-delete-modal .confirm-delete-modal-container {

@@ -1,19 +1,17 @@
 div.home-page {
-  width: 100vw;
-  height: 100vh;
   padding: 0;
 }
 
 div.home-page .home-container {
-  margin: auto;
-  width: 100%;
+  margin: 90px 0 30px 0;
 }
 
 div.home-page .home-container .top-content {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin: 100px 0 20px;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  width: 1105px;
 }
 
 div.home-page .home-container .top-content h2 {
@@ -38,28 +36,23 @@ div.home-page .home-container .top-content button:hover {
 }
 
 div.home-page .home-container .middle-content .naver-profile {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  list-style: none;
 }
 
 div.home-page .home-container .middle-content .naver-profile li {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  list-style: none;
-  margin: auto 10px;
-  flex: 1;
 }
 
 div.home-page .home-container .middle-content .naver-profile li a {
   border-style: none;
   background-color: unset;
-  width: 210px;
-  height: 300px;
+  width: 261px;
+  height: 280px;
   cursor: pointer;
 }
 
@@ -103,18 +96,15 @@ div.home-page .home-container .middle-content .naver-profile .icons a img {
   height: 18px;
 }
 
-@media (max-width: 1000px) {
-  div.home-page {
-    width: 100%;
-    height: 100%;
-  }
+@media (max-width: 700px) {
 
   div.home-page .home-container {
-    margin: auto 30px 5px 60px;
+    width: 100%;
   }
 
   div.home-page .home-container .top-content {
-    padding: 0 2px;
+    padding: 0 10px;
+    width: auto;
   }
 
   div.home-page .home-container .top-content h2 {
@@ -128,20 +118,14 @@ div.home-page .home-container .middle-content .naver-profile .icons a img {
   }
 
   div.home-page .home-container .middle-content .naver-profile {
-    margin: 0 auto;
-  }
-
-  div.home-page .home-container .middle-content .naver-profile li {
-    margin-right: 10px;
-  }
-
-  div.home-page .home-container .middle-content .naver-profile li:last-child {
-    margin-right: 10px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    padding: 0 0 0 120px;
   }
 
   div.home-page .home-container .middle-content .naver-profile li a img {
     width: 200px;
-    height: 300px;
+    height: 260px;
   }
 
   div.home-page .home-container .middle-content .naver-profile li strong {
@@ -154,34 +138,6 @@ div.home-page .home-container .middle-content .naver-profile .icons a img {
 
   div.home-page .home-container .middle-content .naver-profile .icons {
     margin-bottom: 10px;
-  }
-
-  @media (max-width: 700px) {
-    div.home-page .home-container {
-      margin: auto 10px;
-    }
-
-    div.home-page .home-container .middle-content .naver-profile li {
-      margin-right: 4px;
-      align-items: center;
-    }
-
-    div.home-page .home-container .middle-content .naver-profile li:last-child {
-      margin-right: 0px;
-    }
-
-    div.home-page .home-container .middle-content .naver-profile li a img {
-      width: 150px;
-      height: 300px;
-    }
-
-    div.home-page .home-container .middle-content .naver-profile li strong {
-      font-size: 12px;
-    }
-
-    div.home-page .home-container .middle-content .naver-profile li span {
-      font-size: 10px;
-    }
   }
 }
 
