@@ -41,13 +41,13 @@ function ProfileModal({ id = 'profile-modal' }) {
 
   async function handleDeleteNaver(naverId) {
     try {
-      await api.delete(`navers/${naverId}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
-
-      setIsWarningDeleteModalvisible(true);
+      await api
+        .delete(`navers/${naverId}`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        })
+        .then(setIsWarningDeleteModalvisible(true));
       history.push('/home');
     } catch (err) {
       alert('Erro ao deletar o Naver, tente novamente');
