@@ -1,12 +1,12 @@
-div.home-page {
+.home-page {
   padding: 0;
 }
 
-div.home-page .home-container {
+.home-page .home-container {
   margin: 90px 0 30px 0;
 }
 
-div.home-page .home-container .top-content {
+.home-page .home-container .home-top-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,12 +14,12 @@ div.home-page .home-container .top-content {
   width: 1105px;
 }
 
-div.home-page .home-container .top-content h2 {
+.home-page .home-container .home-top-content .home-top-content-h2 {
   font-size: 40px;
   font-weight: 600;
 }
 
-div.home-page .home-container .top-content button {
+.home-page .home-container .home-top-content .home-top-content-button {
   width: 176px;
   height: 40px;
   background: #212121;
@@ -31,112 +31,112 @@ div.home-page .home-container .top-content button {
   transition: 0.2s;
 }
 
-div.home-page .home-container .top-content button:hover {
+.home-page .home-container .home-top-content .home-top-content-button:hover {
   opacity: 0.9;
 }
 
-div.home-page .home-container .middle-content .naver-profile {
+.home-page .home-container .home-middle-content .home-naver-profile {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
   list-style: none;
 }
 
-div.home-page .home-container .middle-content .naver-profile li {
+.home-page .home-container .home-middle-content .home-naver-profile .home-naver-profile-li {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-div.home-page .home-container .middle-content .naver-profile li a {
-  border-style: none;
-  background-color: unset;
+.home-page .home-container .home-middle-content .home-naver-profile .home-naver-profile-li .home-naver-profile-li-a {
   width: 261px;
   height: 280px;
+  border-style: none;
+  background-color: unset;
   cursor: pointer;
 }
 
-div.home-page .home-container .middle-content .naver-profile li a img {
+.home-page .home-container .home-middle-content .home-naver-profile .home-naver-profile-li .home-naver-profile-li-a .home-naver-profile-li-a-img  {
   width: 100%;
   height: 100%;
 }
 
-div.home-page .home-container .middle-content .naver-profile li strong {
+.home-page .home-container .home-middle-content .home-naver-profile .home-naver-profile-li .home-naver-profile-li-strong {
   font-size: 16px;
   font-weight: 600;
   color: #212121;
   margin-top: 10px;
 }
 
-div.home-page .home-container .middle-content .naver-profile li span {
+.home-page .home-container .home-middle-content .home-naver-profile .home-naver-profile-li .home-naver-profile-li-span {
   font-size: 16px;
   font-weight: 500;
   color: #212121;
   margin-top: 10px;
 }
 
-div.home-page .home-container .middle-content .naver-profile .icons {
+.home-page .home-container .home-middle-content .home-naver-profile .home-icons {
   margin-top: 10px;
 }
 
-div.home-page .home-container .middle-content .naver-profile .icons button {
-  margin-right: 16px;
+.home-page .home-container .home-middle-content .home-naver-profile .home-icons .home-icons-button {
   border: 0;
   background: unset;
   cursor: pointer;
+  margin-right: 16px;
 }
 
-div.home-page .home-container .middle-content .naver-profile .icons button img {
+.home-page .home-container .home-middle-content .home-naver-profile .home-icons .home-icons-button .home-icons-button-img {
   width: 18px;
   height: 18px;
 }
 
-div.home-page .home-container .middle-content .naver-profile .icons a img {
+.home-page .home-container .home-middle-content .home-naver-profile .home-icons .home-icons-a .home-icons-a-img  {
   width: 18px;
   height: 18px;
 }
 
 @media (max-width: 700px) {
 
-  div.home-page .home-container {
+  .home-page .home-container {
     width: 100%;
   }
 
-  div.home-page .home-container .top-content {
+  .home-page .home-container .home-top-content {
     padding: 0 10px;
     width: auto;
   }
 
-  div.home-page .home-container .top-content h2 {
+  .home-page .home-container .home-top-content .home-top-content-h2 {
     font-size: 30px;
   }
 
-  div.home-page .home-container .top-content button {
+  .home-page .home-container .home-top-content .home-top-content-button {
     width: 126px;
     height: 35px;
     font-size: 12px;
   }
 
-  div.home-page .home-container .middle-content .naver-profile {
+  .home-page .home-container .home-middle-content .home-naver-profile {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 20px;
     padding: 0 0 0 120px;
   }
 
-  div.home-page .home-container .middle-content .naver-profile li a img {
+  .home-page .home-container .home-middle-content .home-naver-profile .home-naver-profile-li .home-naver-profile-li-a .naver-profile-li-a-img  {
     width: 200px;
     height: 260px;
   }
 
-  div.home-page .home-container .middle-content .naver-profile li strong {
+  .home-page .home-container .home-middle-content .home-naver-profile .home-naver-profile-li .home-naver-profile-li-strong {
     font-size: 14px;
   }
 
-  div.home-page .home-container .middle-content .naver-profile li span {
+  .home-page .home-container .home-middle-content .home-naver-profile .home-naver-profile-li .home-naver-profile-li-span {
     font-size: 14px;
   }
 
-  div.home-page .home-container .middle-content .naver-profile .icons {
+  .home-page .home-container .home-middle-content .home-naver-profile .home-icons {
     margin-bottom: 10px;
   }
 }
