@@ -51,32 +51,50 @@ function Home() {
     <div className="home-page container">
       <Header />
       <div className="home-container">
-        <div className="top-content">
-          <h2>Navers</h2>
-          <Link to="/new">
-            <button type="button">Adicionar Naver</button>
+        <div className="home-top-content">
+          <h2 className="home-top-content-h2">Navers</h2>
+          <Link className="home-top-content-a" to="/new">
+            <button className="home-top-content-button" type="button">
+              Adicionar Naver
+            </button>
           </Link>
         </div>
-        <section className="middle-content">
-          <ul className="naver-profile">
+        <section className="home-middle-content">
+          <ul className="home-naver-profile">
             {navers.map(naver => {
               return (
-                <li key={naver.id}>
-                  <Link to={`/profile/${naver.id}`}>
-                    <img src={naver.url} alt="Avatar" className="avatar" />
+                <li key={naver.id} className="home-naver-profile-li">
+                  <Link
+                    to={`/profile/${naver.id}`}
+                    className="home-naver-profile-li-a"
+                  >
+                    <img
+                      src={naver.url}
+                      alt="Avatar"
+                      className="home-naver-profile-li-a-img"
+                    />
                   </Link>
-                  <strong>{naver.name}</strong>
-                  <span>{naver.job_role}</span>
-                  <div className="icons">
+                  <strong className="home-naver-profile-li-strong">
+                    {naver.name}
+                  </strong>
+                  <span className="home-naver-profile-li-span">
+                    {naver.job_role}
+                  </span>
+                  <div className="home-icons">
                     <button
                       type="button"
+                      className="home-icons-button"
                       onClick={() => handleDeleteNaver(naver.id)}
                     >
-                      <img src={trash} alt="Trash" />
+                      <img
+                        src={trash}
+                        alt="Trash"
+                        className="home-icons-button-img"
+                      />
                     </button>
 
-                    <Link to={`/update/${naver.id}`}>
-                      <img src={edit} alt="Edit" />
+                    <Link to={`/update/${naver.id}`} className="home-icons-a">
+                      <img src={edit} alt="Edit" className="home-icons-a-img" />
                     </Link>
                   </div>
                 </li>
