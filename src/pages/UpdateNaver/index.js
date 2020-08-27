@@ -12,7 +12,10 @@ import arrowLeft from '../../assets/arrow-left.svg';
 import './styles.css';
 
 function UpdateNaver() {
-  const [isModalVisible, setIsModalvisible] = useState(false);
+  const [
+    isWarningUpdateModalVisible,
+    setIsWarningUpdateModalvisible,
+  ] = useState(false);
   const [name, setName] = useState('');
   const [birthdate, setBirthdate] = useState('');
   const [admission_date, setAdmissiondate] = useState('');
@@ -37,6 +40,7 @@ function UpdateNaver() {
       url,
       job_role,
     };
+
     try {
       await api
         .put(`navers/${params.id}`, data, {
@@ -44,11 +48,11 @@ function UpdateNaver() {
             Authorization: `Bearer ${token}`,
           },
         })
-        .then(setIsModalvisible(true));
+        .then(setIsWarningUpdateModalvisible(true));
 
       history.push('/home');
     } catch (err) {
-      alert('Erro ao cadastrar Naver, tente novamente.');
+      alert('Erro ao atualizar o Naver, tente novamente.');
     }
   }
 
@@ -125,8 +129,10 @@ function UpdateNaver() {
         </div>
         <div className="footer-content">
           <button type="submit">Salvar</button>
-          {isModalVisible ? (
-            <WarningUpdateModal onClose={() => setIsModalvisible(false)} />
+          {isWarningUpdateModalVisible ? (
+            <WarningUpdateModal
+              onClose={() => setIsWarningUpdateModalvisible(false)}
+            />
           ) : null}
         </div>
       </form>

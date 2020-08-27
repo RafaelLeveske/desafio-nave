@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import api from '../../services/api';
 
 import Header from '../../components/Header';
-import ConfirmDeleteModal from '../../components/ConfirmDeleteModal';
 import WarningDeleteModal from '../../components/WarningDeleteModal';
 
 import trash from '../../assets/trash.svg';
@@ -13,7 +12,6 @@ import edit from '../../assets/edit.svg';
 import './styles.css';
 
 function Home() {
-  const [isDeleteModalVisible, setIsDeleteModalvisible] = useState(false);
   const [navers, setNavers] = useState([]);
   const [
     isWarningDeleteModalVisible,
@@ -72,7 +70,7 @@ function Home() {
                   <div className="icons">
                     <button
                       type="button"
-                      onClick={() => setIsDeleteModalvisible(true)}
+                      onClick={() => handleDeleteNaver(naver.id)}
                     >
                       <img src={trash} alt="Trash" />
                     </button>
@@ -81,29 +79,6 @@ function Home() {
                       <img src={edit} alt="Edit" />
                     </Link>
                   </div>
-                  {isDeleteModalVisible ? (
-                    <ConfirmDeleteModal
-                      onClose={() => setIsDeleteModalvisible(false)}
-                    >
-                      <button
-                        className="close-modal-cancel"
-                        type="button"
-                        onClick={() => setIsDeleteModalvisible(false)}
-                      >
-                        Cancelar
-                      </button>
-                      <button
-                        className="close-modal-delete"
-                        type="button"
-                        onClick={() =>
-                          handleDeleteNaver(naver.id) &&
-                          setIsDeleteModalvisible(false)
-                        }
-                      >
-                        Excluir
-                      </button>
-                    </ConfirmDeleteModal>
-                  ) : null}
                 </li>
               );
             })}

@@ -12,7 +12,10 @@ import arrowLeft from '../../assets/arrow-left.svg';
 import './styles.css';
 
 function NewNaver() {
-  const [isModalVisible, setIsModalvisible] = useState(false);
+  const [
+    isWarningCreateModalVisible,
+    setIsWarningCreateModalvisible,
+  ] = useState(false);
   const [name, setName] = useState('');
   const [birthdate, setBirthdate] = useState('');
   const [admission_date, setAdmissiondate] = useState('');
@@ -42,7 +45,7 @@ function NewNaver() {
             Authorization: `Bearer ${token}`,
           },
         })
-        .then(setIsModalvisible(true));
+        .then(setIsWarningCreateModalvisible(true));
 
       history.push('/home');
     } catch (err) {
@@ -123,8 +126,10 @@ function NewNaver() {
         </div>
         <div className="footer-content">
           <button type="submit">Salvar</button>
-          {isModalVisible ? (
-            <WarningCreateModal onClose={() => setIsModalvisible(false)} />
+          {isWarningCreateModalVisible ? (
+            <WarningCreateModal
+              onClose={() => setIsWarningCreateModalvisible(false)}
+            />
           ) : null}
         </div>
       </form>
