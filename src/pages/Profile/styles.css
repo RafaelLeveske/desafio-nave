@@ -1,4 +1,4 @@
-.profile-modal {
+.profile {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,14 +11,14 @@
   background: rgba(0, 0, 0, 0.5);
 }
 
-.profile-modal .profile-modal-container {
+.profile .profile-container {
   background: #fff;
   width: 1000px;
   height: 500px;
   margin: auto 0;
 }
 
-.profile-modal .profile-modal-container .home-modal {
+.profile .profile-container .profile-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,16 +26,16 @@
   height: 100%;
 }
 
-.profile-modal .profile-modal-container .home-modal .avatar-content {
+.profile .profile-container .profile-content .avatar-content {
   margin-top: 4px;
 }
 
-.profile-modal .profile-modal-container .home-modal .avatar-content img {
+.profile .profile-container .profile-content .avatar-content img {
   width: 500px;
   height: 500px;
 }
 
-.profile-modal .profile-modal-container .home-modal .side-content {
+.profile .profile-container .profile-content .side-content {
   display: flex;
   width: 100%;
   height: 100%;
@@ -43,51 +43,55 @@
   margin-top: 30px;
 }
 
-.profile-modal .profile-modal-container .home-modal .side-content .middle {
+.profile .profile-container .profile-content .side-content .middle {
   display: flex;
   flex-direction: column;
   margin-left: 20px;
 }
 
-.profile-modal .profile-modal-container .home-modal .side-content .middle .bio h1 {
+.profile .profile-container .profile-content .side-content .middle .bio {
+  margin-top: 15px;
+}
+
+.profile .profile-container .profile-content .side-content .middle .bio h1 {
   font-size: 24px;
   font-weight: 600;
   color: #000000;
 }
 
-.profile-modal .profile-modal-container .home-modal .side-content .middle .bio h2 {
+.profile .profile-container .profile-content .side-content .middle .bio h2 {
   font-size: 16px;
   font-weight: normal;
   color: #212121;
   margin-top: 10px;
 }
 
-.profile-modal .profile-modal-container .home-modal .side-content .middle .bio strong {
+.profile .profile-container .profile-content .side-content .middle .bio strong {
   font-size: 16px;
   font-weight: 600;
   color: #212121;
   margin-top: 24px;
 }
 
-.profile-modal .profile-modal-container .home-modal .side-content .middle .bio  span {
+.profile .profile-container .profile-content .side-content .middle .bio  span {
   font-size: 16px;
   font-weight: normal;
   color: #212121;
   margin-top: 10px;
 }
 
-.profile-modal .profile-modal-container .home-modal .side-content .middle .footer-modal {
-  margin-top: 150px;
+.profile .profile-container .profile-content .side-content .middle .profile-footer {
+  margin-top: 160px;
 }
 
-.profile-modal .profile-modal-container .home-modal .side-content .middle .footer-modal button {
+.profile .profile-container .profile-content .side-content .middle .profile-footer button {
   margin-right: 16px;
   border: 0;
   background: unset;
   cursor: pointer;
 }
 
-.profile-modal .profile-modal-container .home-modal .side-content .close-modal a {
+.profile .profile-container .profile-content .side-content .close-modal a {
   transition: 0.2s;
   margin-right: 21px;
   border: 0;
@@ -95,80 +99,80 @@
   cursor: pointer;
 }
 
-.profile-modal .profile-modal-container .home-modal .side-content .close-modal a:hover {
+.profile .profile-container .profile-content .side-content .close-modal a:hover {
   opacity: 0.7;
 }
 
-.profile-modal .profile-modal-container .home-modal .side-content .bio {
+.profile .profile-container .profile-content .side-content .bio {
   display: flex;
   flex-direction: column;
 }
 
 @media (max-width: 1000px) {
-  .profile-modal {
+  .profile {
     height: 170%;
     width: 102%;
   }
 
-  .profile-modal .profile-modal-container {
+  .profile .profile-container {
     width: 420px;
     height: 255px;
     display: flex;
     align-items: center;
   }
 
-  .profile-modal .profile-modal-container .home-modal {
+  .profile .profile-container .profile-content {
     display: flex;
     align-items: center;
   }
 
-  .profile-modal .profile-modal-container .home-modal .avatar-content {
+  .profile .profile-container .profile-content .avatar-content {
     margin-top: 0;
   }
 
-  .profile-modal .profile-modal-container .home-modal .avatar-content img {
+  .profile .profile-container .profile-content .avatar-content img {
     width: 229px;
     height: 259px;
   }
 
-  .profile-modal .profile-modal-container .home-modal .side-content .middle {
+  .profile .profile-container .profile-content .side-content .middle {
     margin-left: 10px;
   }
 
-  .profile-modal .profile-modal-container .home-modal .side-content .middle .bio h1 {
+  .profile .profile-container .profile-content .side-content .middle .bio h1 {
     font-size: 12px;
   }
 
-  .profile-modal .profile-modal-container .home-modal .side-content .middle .bio h2 {
+  .profile .profile-container .profile-content .side-content .middle .bio h2 {
     font-size: 8px;
     margin-top: 3px;
   }
 
-  .profile-modal .profile-modal-container .home-modal .side-content .middle .bio strong {
+  .profile .profile-container .profile-content .side-content .middle .bio strong {
     font-size: 8px;
     margin-top: 5px;
   }
 
-  .profile-modal .profile-modal-container .home-modal .side-content .middle .bio  span {
+  .profile .profile-container .profile-content .side-content .middle .bio  span {
     font-size: 8px;
     margin-top: 3px;
   }
 
-  .profile-modal .profile-modal-container .home-modal .side-content .middle .footer-modal {
+  .profile .profile-container .profile-content .side-content .middle .profile-footer {
     margin-top: 30px;
   }
 
-  .profile-modal .profile-modal-container .home-modal .side-content .middle .footer-modal button img {
+  .profile .profile-container .profile-content .side-content .middle .profile-footer button img {
     width: 10px;
     height: 10px;
   }
 
-  .profile-modal .profile-modal-container .home-modal .side-content .middle .footer-modal a img {
+  .profile .profile-container .profile-content .side-content .middle .profile-footer a img {
     width: 10px;
     height: 10px;
   }
 
-  .profile-modal .profile-modal-container .home-modal .side-content .close-modal a img {
+  .profile .profile-container .profile-content .side-content .close-modal a img {
     width: 10px;
     height: 10px;
     margin-left: 105px;
