@@ -49,6 +49,7 @@ function NewNaver() {
 
       history.push('/home');
     } catch (err) {
+      setIsWarningCreateModalvisible(false);
       alert('Erro ao cadastrar Naver, tente novamente.');
     }
   }
@@ -57,35 +58,44 @@ function NewNaver() {
     <div className="new-naver-page container">
       <Header />
       <form className="new-naver-container" onSubmit={handleNewNaver}>
-        <div className="top-content">
+        <div className="new-naver-top-content">
           <Link to="/home">
-            <img src={arrowLeft} alt="Arrow Left" />
+            <img
+              src={arrowLeft}
+              alt="Arrow Left"
+              className="new-naver-top-content-img"
+            />
           </Link>
-          <h2>Adicionar Naver</h2>
+          <h2 className="new-naver-top-content-h2">Adicionar Naver</h2>
         </div>
         <div className="middle-content">
           <div className="first-column">
-            <ul>
-              <li>
-                <span>Nome</span>
+            <ul className="first-column-ul">
+              <li className="first-column-ul-li">
+                <span className="first-column-ul-li-span">Nome</span>
                 <input
                   type="text"
+                  className="first-column-ul-li-input"
                   placeholder="Nome"
                   value={name}
                   onChange={e => setName(e.target.value)}
                 />
 
-                <span>Idade</span>
+                <span className="first-column-ul-li-span">Idade</span>
                 <input
                   type="text"
+                  className="first-column-ul-li-input"
                   placeholder="Idade"
                   value={birthdate}
                   onChange={e => setBirthdate(e.target.value)}
                 />
 
-                <span>Projetos que participou</span>
+                <span className="first-column-ul-li-span">
+                  Projetos que participou
+                </span>
                 <input
                   type="text"
+                  className="first-column-ul-li-input"
                   placeholder="Projetos que participou"
                   value={project}
                   onChange={e => setProject(e.target.value)}
@@ -95,27 +105,34 @@ function NewNaver() {
           </div>
 
           <div className="second-column">
-            <ul>
-              <li>
-                <span>Cargo</span>
+            <ul className="second-column-ul">
+              <li className="second-column-ul-li">
+                <span className="second-column-ul-li-span">Cargo</span>
                 <input
                   type="text"
+                  className="second-column-ul-li-input"
                   placeholder="Cargo"
                   value={job_role}
                   onChange={e => setJobRole(e.target.value)}
                 />
 
-                <span>Tempo de empresa</span>
+                <span className="second-column-ul-li-span">
+                  Tempo de empresa
+                </span>
                 <input
                   type="text"
+                  className="second-column-ul-li-input"
                   placeholder="Tempo de empresa"
                   value={admission_date}
                   onChange={e => setAdmissiondate(e.target.value)}
                 />
 
-                <span>URL da foto do Naver</span>
+                <span className="second-column-ul-li-span">
+                  URL da foto do Naver
+                </span>
                 <input
                   type="text"
+                  className="second-column-ul-li-input"
                   placeholder="URL da foto do Naver"
                   value={url}
                   onChange={e => setUrl(e.target.value)}
@@ -125,7 +142,9 @@ function NewNaver() {
           </div>
         </div>
         <div className="footer-content">
-          <button type="submit">Salvar</button>
+          <button className="footer-content-button" type="submit">
+            Salvar
+          </button>
           {isWarningCreateModalVisible ? (
             <WarningCreateModal
               onClose={() => setIsWarningCreateModalvisible(false)}
