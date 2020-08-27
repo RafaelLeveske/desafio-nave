@@ -68,34 +68,34 @@ function NewNaver() {
           </Link>
           <h2 className="new-naver-top-content-h2">Adicionar Naver</h2>
         </div>
-        <div className="middle-content">
-          <div className="first-column">
-            <ul className="first-column-ul">
-              <li className="first-column-ul-li">
-                <span className="first-column-ul-li-span">Nome</span>
+        <div className="new-naver-middle-content">
+          <div className="new-naver-first-column">
+            <ul className="new-naver-first-column-ul">
+              <li className="new-naver-first-column-ul-li">
+                <span className="new-naver-first-column-ul-li-span">Nome</span>
                 <input
                   type="text"
-                  className="first-column-ul-li-input"
+                  className="new-naver-first-column-ul-li-input"
                   placeholder="Nome"
                   value={name}
                   onChange={e => setName(e.target.value)}
                 />
 
-                <span className="first-column-ul-li-span">Idade</span>
+                <span className="new-naver-first-column-ul-li-span">Idade</span>
                 <input
                   type="text"
-                  className="first-column-ul-li-input"
+                  className="new-naver-first-column-ul-li-input"
                   placeholder="Idade"
                   value={birthdate}
                   onChange={e => setBirthdate(e.target.value)}
                 />
 
-                <span className="first-column-ul-li-span">
+                <span className="new-naver-first-column-ul-li-span">
                   Projetos que participou
                 </span>
                 <input
                   type="text"
-                  className="first-column-ul-li-input"
+                  className="new-naver-first-column-ul-li-input"
                   placeholder="Projetos que participou"
                   value={project}
                   onChange={e => setProject(e.target.value)}
@@ -104,35 +104,37 @@ function NewNaver() {
             </ul>
           </div>
 
-          <div className="second-column">
-            <ul className="second-column-ul">
-              <li className="second-column-ul-li">
-                <span className="second-column-ul-li-span">Cargo</span>
+          <div className="new-naver-second-column">
+            <ul className="new-naver-second-column-ul">
+              <li className="new-naver-second-column-ul-li">
+                <span className="new-naver-second-column-ul-li-span">
+                  Cargo
+                </span>
                 <input
                   type="text"
-                  className="second-column-ul-li-input"
+                  className="new-naver-second-column-ul-li-input"
                   placeholder="Cargo"
                   value={job_role}
                   onChange={e => setJobRole(e.target.value)}
                 />
 
-                <span className="second-column-ul-li-span">
+                <span className="new-naver-second-column-ul-li-span">
                   Tempo de empresa
                 </span>
                 <input
                   type="text"
-                  className="second-column-ul-li-input"
+                  className="new-naver-second-column-ul-li-input"
                   placeholder="Tempo de empresa"
                   value={admission_date}
                   onChange={e => setAdmissiondate(e.target.value)}
                 />
 
-                <span className="second-column-ul-li-span">
+                <span className="new-naver-second-column-ul-li-span">
                   URL da foto do Naver
                 </span>
                 <input
                   type="text"
-                  className="second-column-ul-li-input"
+                  className="new-naver-second-column-ul-li-input"
                   placeholder="URL da foto do Naver"
                   value={url}
                   onChange={e => setUrl(e.target.value)}
@@ -141,8 +143,8 @@ function NewNaver() {
             </ul>
           </div>
         </div>
-        <div className="footer-content">
-          <button className="footer-content-button" type="submit">
+        <div className="new-naver-footer-content">
+          <button className="new-naver-footer-content-button" type="submit">
             Salvar
           </button>
           {isWarningCreateModalVisible ? (
