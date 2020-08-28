@@ -11,7 +11,7 @@ Navedex é uma aplicação de cadastro e gerenciamento de Navers. A aplicação 
 ## 🚀 Instalação e execução
 
 1. Faça um clone desse repositório;
-2. Entre na pasta rodando `cd desafio-nave;
+2. Entre na pasta rodando `cd desafio-nave`;
 3. Rode `yarn` para instalar as dependências;
 4. Rode `yarn start` para iniciar a aplicação.
 
