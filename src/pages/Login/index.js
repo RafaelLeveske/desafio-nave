@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
-
 import { useHistory } from 'react-router-dom';
+import * as Yup from 'yup';
 
 import { useAuth } from '../../hooks/auth';
 
@@ -20,6 +20,17 @@ function Login() {
     async e => {
       e.preventDefault();
       try {
+        const schema = Yup.object().shape({
+          email: Yup.string().required(),
+          password: Yup.string().required(),
+        });
+
+        await schema.validate(
+          { email, password },
+          {
+            abortEarly: false,
+          },
+        );
         signIn({
           email,
           password,
@@ -27,7 +38,7 @@ function Login() {
 
         history.push('/home');
       } catch (err) {
-        alert('Erro ao cadastrar Naver, tente novamente.');
+        alert('Erro no Login, email ou senha incorretos');
       }
     },
     [email, history, password, signIn],
