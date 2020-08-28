@@ -22,4 +22,4 @@ Navedex é uma aplicação de cadastro e gerenciamento de Navers. A aplicação 
 - Faça commit das suas alterações: `git commit -m 'feat: Minha nova feature'`;
 - Faça push para a sua branch: `git push origin minha-feature`.
 
-Depois que o merge da sua pull request for feito, você pode deletar a sua branch." />
+Depois que o merge da sua pull request for feito, você pode deletar a sua branch."
