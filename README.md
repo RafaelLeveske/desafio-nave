@@ -24,6 +24,6 @@ Navedex é uma aplicação de cadastro e gerenciamento de Navers. A aplicação 
 
 Depois que o merge da sua pull request for feito, você pode deletar a sua branch."
 
-## ✍️ Autores <a name = "authors"></a>
+## ✍️ Autor <a name = "authors"></a>
 
 - [@RafaelLeveske](https://github.com/RafaelLeveske)
