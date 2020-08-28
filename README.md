@@ -6,7 +6,7 @@
 
 ## 💻 Projeto
 
-Navedex é uma aplicação de cadastro e gerenciamento de Navers. A aplicação Web pode ser usada apenas pelos usuários pré cadastrados no sistema pois o sistema requer autênticação. A aplicação já se encontra em produção e pode ser acessada através da URL: navedexdesafio.netlify.app/
+Navedex é uma aplicação de cadastro e gerenciamento de Navers. A aplicação Web pode ser usada apenas pelos usuários pré cadastrados no sistema pois o sistema requer autênticação. A aplicação já se encontra em produção e pode ser acessada através do site: <a href="navedexdesafio.netlify.app/">Navedex</a>
 
 ## 🚀 Instalação e execução
 
