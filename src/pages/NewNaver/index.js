@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-
+import React, { useState, useCallback } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import * as Yup from 'yup';
 
 import api from '../../services/api';
 
@@ -27,32 +27,50 @@ function NewNaver() {
 
   const token = localStorage.getItem('@Navedex:token');
 
-  async function handleNewNaver(e) {
-    e.preventDefault();
+  const handleNewNaver = useCallback(
+    async e => {
+      e.preventDefault();
 
-    const data = {
-      name,
-      birthdate,
-      admission_date,
-      project,
-      url,
-      job_role,
-    };
-    try {
-      await api
-        .post('navers', data, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        })
-        .then(setIsWarningCreateModalvisible(true));
+      const data = {
+        name,
+        birthdate,
+        admission_date,
+        project,
+        url,
+        job_role,
+      };
+      try {
+        const schema = Yup.object().shape({
+          name: Yup.string().required(),
+          birthdate: Yup.string().required(),
+          admission_date: Yup.string().required(),
+          project: Yup.string().required(),
+          url: Yup.string().required(),
+          job_role: Yup.string().required(),
+        });
 
-      history.push('/home');
-    } catch (err) {
-      setIsWarningCreateModalvisible(false);
-      alert('Erro ao cadastrar Naver, tente novamente.');
-    }
-  }
+        await schema.validate(data, {
+          abortEarly: false,
+        });
+
+        await api
+          .post('navers', data, {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          })
+          .then(setIsWarningCreateModalvisible(true));
+
+        history.push('/home');
+      } catch (err) {
+        alert(
+          'Erro ao cadastrar Naver verifique os dados de cadastro e tente novamente',
+        );
+        setIsWarningCreateModalvisible(false);
+      }
+    },
+    [admission_date, birthdate, history, job_role, name, project, token, url],
+  );
 
   return (
     <div className="new-naver-page container">

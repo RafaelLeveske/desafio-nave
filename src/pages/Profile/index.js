@@ -62,7 +62,7 @@ function ProfileModal({ id = 'profile' }) {
   );
 
   return (
-    <div id={id} className="profile" onClick={handlePushToHome}>
+    <div id={id} className="profile container" onClick={handlePushToHome}>
       <div className="profile-container">
         {navers && (
           <div className="profile-content">

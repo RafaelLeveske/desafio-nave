@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-
+import React, { useState, useCallback } from 'react';
 import { Link, useHistory, useRouteMatch } from 'react-router-dom';
+import * as Yup from 'yup';
 
 import api from '../../services/api';
 
@@ -29,33 +29,61 @@ function UpdateNaver() {
 
   const token = localStorage.getItem('@Navedex:token');
 
-  async function handleUpdateNaver(e) {
-    e.preventDefault();
+  const handleUpdateNaver = useCallback(
+    async e => {
+      e.preventDefault();
 
-    const data = {
-      name,
-      birthdate,
+      const data = {
+        name,
+        birthdate,
+        admission_date,
+        project,
+        url,
+        job_role,
+      };
+
+      try {
+        const schema = Yup.object().shape({
+          name: Yup.string().required(),
+          birthdate: Yup.string().required(),
+          admission_date: Yup.string().required(),
+          project: Yup.string().required(),
+          url: Yup.string().required(),
+          job_role: Yup.string().required(),
+        });
+
+        await schema.validate(data, {
+          abortEarly: false,
+        });
+
+        await api
+          .put(`navers/${params.id}`, data, {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          })
+          .then(setIsWarningUpdateModalvisible(true));
+
+        history.push('/home');
+      } catch (err) {
+        alert(
+          'Erro ao atualizar o Naver, verifique os dados de cadastro tente novamente.',
+        );
+        setIsWarningUpdateModalvisible(false);
+      }
+    },
+    [
       admission_date,
-      project,
-      url,
+      birthdate,
+      history,
       job_role,
-    };
-
-    try {
-      await api
-        .put(`navers/${params.id}`, data, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        })
-        .then(setIsWarningUpdateModalvisible(true));
-
-      history.push('/home');
-    } catch (err) {
-      setIsWarningUpdateModalvisible(false);
-      alert('Erro ao atualizar o Naver, tente novamente.');
-    }
-  }
+      name,
+      params.id,
+      project,
+      token,
+      url,
+    ],
+  );
 
   return (
     <div className="update-naver-page container" onSubmit={handleUpdateNaver}>
